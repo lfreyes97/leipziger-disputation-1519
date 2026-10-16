@@ -1,0 +1,18 @@
+# Build LaTeX
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+# Python
+__pycache__/
+*.pyc
+# OS / editores
+.DS_Store
+*~
+*.swp
+# Renders temporales (se regeneran con pdftoppm)
+# /tmp/opencode/leipzig/

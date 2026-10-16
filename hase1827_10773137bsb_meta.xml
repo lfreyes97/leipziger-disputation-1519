@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <identifier>10773137bsb</identifier>
+  <adaptive_ocr>true</adaptive_ocr>
+  <collection>german-online-libraries</collection>
+  <collection>booksbylanguage_german</collection>
+  <collection>booksbylanguage</collection>
+  <creator>Hase, Karl August von</creator>
+  <date>1827</date>
+  <description>Leipzig : Sühring 1827
+
+Location/Holding institution: 
+München, Bayerische Staatsbibliothek -- Polem. 741 f
+
+</description>
+  <language>German</language>
+  <mediatype>texts</mediatype>
+  <ocr-additional-languages>Fraktur</ocr-additional-languages>
+  <source_url>https://www.digitale-sammlungen.de/en/view/bsb10773137</source_url>
+  <title>Die Leipziger Disputation: eine theologische Denkschrift</title>
+  <uploader>pavelserebrjanyi@gmail.com</uploader>
+  <collection_added>booksbylanguage_german</collection_added>
+  <collection_added>booksbylanguage</collection_added>
+  <publicdate>2026-05-08 20:54:01</publicdate>
+  <addeddate>2026-05-08 20:54:01</addeddate>
+  <identifier-access>http://archive.org/details/10773137bsb</identifier-access>
+  <identifier-ark>ark:/13960/s215mmxb7c1</identifier-ark>
+  <imagecount>81</imagecount>
+  <ppi>72</ppi>
+  <ocr>tesseract 5.3.0-6-g76ae</ocr>
+  <ocr_parameters>-l deu+Fraktur</ocr_parameters>
+  <ocr_module_version>0.0.21</ocr_module_version>
+  <ocr_detected_script>Fraktur</ocr_detected_script>
+  <ocr_detected_script_conf>0.9755</ocr_detected_script_conf>
+  <ocr_detected_lang>de</ocr_detected_lang>
+  <ocr_detected_lang_conf>1.0000</ocr_detected_lang_conf>
+  <page_number_confidence>76</page_number_confidence>
+  <page_number_module_version>1.0.5</page_number_module_version>
+  <pdf_degraded>invalid-jp2-headers</pdf_degraded>
+  <pdf_module_version>0.0.25</pdf_module_version>
+</metadata>

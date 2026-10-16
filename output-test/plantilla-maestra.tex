@@ -1,0 +1,28 @@
+% Plantilla maestra — Seitz 1903, II. Disputatio Luther-Eck (prueba pp. 55-64)
+% Compilar: xelatex plantilla-maestra.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Libertinus Serif}
+\usepackage[lmargin=3cm,rmargin=3cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.08}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{1.2em}
+
+\title{Der authentische Text der Leipziger Disputation (1519)\\II.\ Disputatio Luther--Eck (Seitz 1903, pp.\ 55--64, prueba)}
+\author{Transcripci\'on diplom\'atica de prueba}
+\date{}
+
+\begin{document}
+\maketitle
+\noindent\textit{Fuente: Seitz 1903, test pp.\ 1--10 (= impresas 55--64). Fragmento(s) sin pre\'ambulo, ensamblados por \texttt{\textbackslash input}.}
+
+\bigskip
+\input{test-p01.tex}
+\input{test-p01b.tex}
+\input{test-p02.tex}
+\input{test-p03.tex}
+\input{test-p04.tex}
+\input{test-p05.tex}
+% Siguientes fragmentos: \input{test-p06.tex} etc., unidos sin \newpage salvo corte real de secci\'on.
+\end{document}

@@ -1,0 +1,38 @@
+% Edición latina — Seitz 1903, II. Disputatio Luther-Eck (impresas 55-218)
+% Compilar: xelatex edicion-latina.tex (dos pasadas)
+\documentclass[11pt,a4paper,twoside]{article}
+\usepackage{fontspec}
+\setmainfont{Libertinus Serif}
+\usepackage[lmargin=3cm,rmargin=3cm,top=2.8cm,bottom=2.5cm,headheight=14pt]{geometry}
+\usepackage{setspace}
+\setstretch{1.08}
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{1.2em}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+% llamada con la etiqueta ORIGINAL del impreso + nota con etiqueta repetida
+\newcommand{\apnota}[2]{\textsuperscript{#1)}\,\footnote{[#1] #2}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{II.\ Disputatio Luther--Eck}
+\fancyhead[RO]{Seitz 1903}
+\fancyfoot[LE,RO]{\thepage}
+\begin{document}
+\begin{titlepage}
+\centering
+{\LARGE Der authentische Text\\der Leipziger Disputation\par}
+\vspace{1em}
+{\large II.\ Disputatio Luther--Eck (4--14 de julio de 1519)\par}
+\vspace{2em}
+{\normalsize Transcripci\'on diplom\'atica de Seitz 1903 \textperiodcentered{} impresas 55--218\par}
+\vfill
+{\small Edici\'on de trabajo \textperiodcentered{} \today\par}
+\end{titlepage}
+\noindent\textit{Fuente: Seitz, Der authentische Text der Leipziger Disputation (Berl\'in 1903), ejemplar Internet Archive. Transcripci\'on p\'agina por p\'agina con aparato cr\'itico \'integro (siglas M\,U\,Uv\,Mc\,L\"o\,P\,R.); u/v, i/j y puntuaci\'on originales; [\dots] = ilegible; [NNN] = referencias del impreso. Anomal\'ias documentadas en \texttt{lotes/RESOLUCIONES.md}.}
+
+\bigskip
+\input{lote1.tex}
+\input{lote2.tex}
+\input{lote3.tex}
+\end{document}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+  <leader>01116cam a2200277Ii 4500</leader>
+  <controlfield tag="001">a4531545</controlfield>
+  <controlfield tag="008">800912s1903    gw       b    000 0 ger d</controlfield>
+  <datafield tag="035" ind1=" " ind2=" ">
+    <subfield code="a">(OCoLC)6705542</subfield>
+  </datafield>
+  <datafield tag="040" ind1=" " ind2=" ">
+    <subfield code="a">BMC</subfield>
+    <subfield code="c">BMC</subfield>
+    <subfield code="d">OCLCQ</subfield>
+    <subfield code="d">OCLCG</subfield>
+  </datafield>
+  <datafield tag="041" ind1="0" ind2=" ">
+    <subfield code="a">gerlat</subfield>
+  </datafield>
+  <datafield tag="050" ind1=" " ind2="4">
+    <subfield code="a">BR355.L5</subfield>
+    <subfield code="b">E2 1903</subfield>
+  </datafield>
+  <datafield tag="082" ind1="0" ind2="4">
+    <subfield code="a">270.6</subfield>
+  </datafield>
+  <datafield tag="100" ind1="1" ind2=" ">
+    <subfield code="a">Eck, Johann,</subfield>
+    <subfield code="d">1486-1543.</subfield>
+  </datafield>
+  <datafield tag="245" ind1="1" ind2="4">
+    <subfield code="a">Der authentische Text der Leipziger Disputation, 1519 :</subfield>
+    <subfield code="b">aus bisher unbenutzten Quellen /</subfield>
+    <subfield code="c">herausgegeben von Otto Seitz.</subfield>
+  </datafield>
+  <datafield tag="260" ind1=" " ind2=" ">
+    <subfield code="a">Berlin :</subfield>
+    <subfield code="b">C.A. Schwetschke,</subfield>
+    <subfield code="c">1903.</subfield>
+  </datafield>
+  <datafield tag="300" ind1=" " ind2=" ">
+    <subfield code="a">iv, 247 p. ;</subfield>
+    <subfield code="c">22 cm.</subfield>
+  </datafield>
+  <datafield tag="500" ind1=" " ind2=" ">
+    <subfield code="a">Introduction in German; text in Latin.</subfield>
+  </datafield>
+  <datafield tag="504" ind1=" " ind2=" ">
+    <subfield code="a">Includes bibliographical references.</subfield>
+  </datafield>
+  <datafield tag="505" ind1="0" ind2=" ">
+    <subfield code="a">1. Erste Disputation zwischen Karlstadt und Eck. -- 2. Disputation zwischen Luther und Eck. -- 3. Zweite Disputation zwischen Karlstadt und Eck.</subfield>
+  </datafield>
+  <datafield tag="583" ind1=" " ind2=" ">
+    <subfield code="a">cat</subfield>
+    <subfield code="c">20100806</subfield>
+    <subfield code="k">sjp</subfield>
+    <subfield code="5">UPB</subfield>
+  </datafield>
+  <datafield tag="650" ind1=" " ind2="0">
+    <subfield code="a">Leipzig Disputation, Leipzig, Germany, 1519.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Karlstadt, Andreas Rudolff-Bodenstein von,</subfield>
+    <subfield code="d">ca. 1480-1541.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Luther, Martin,</subfield>
+    <subfield code="d">1483-1546.</subfield>
+  </datafield>
+  <datafield tag="700" ind1="1" ind2=" ">
+    <subfield code="a">Seitz, Otto,</subfield>
+    <subfield code="d">1872-</subfield>
+  </datafield>
+  <datafield tag="596" ind1=" " ind2=" ">
+    <subfield code="a">1</subfield>
+  </datafield>
+  <datafield tag="926" ind1=" " ind2=" ">
+    <subfield code="a">LEE</subfield>
+    <subfield code="b">LEE-LIB</subfield>
+    <subfield code="c">BR 355 .L5 E2 1903</subfield>
+    <subfield code="d">BOOK</subfield>
+    <subfield code="f">1</subfield>
+  </datafield>
+</record>

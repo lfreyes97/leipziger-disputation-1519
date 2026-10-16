@@ -5,7 +5,7 @@
 - Segunda pasada humana (subagentes) solo sobre páginas divergentes + erratas ya listadas en reportes.
 - Criterio: diplomática (se conserva la errata con `(so!)` o aviso; no se enmienda en silencio).
 
-## 2. Aparato y anomalías → `lotes/RESOLUCIONES.md`
+## 2. Aparato y anomalías → `docs/RESOLUCIONES.md`
 - 6 anomalías documentadas con decisión aplicada (196-26, 205-21a/b, nota 32 en 92–93, defs sin llamada 103-18/124-15b/128-15/212-27, 21b duplicado 59/60).
 - Normalizar claves y trafegar glosas alemanas sin traducir.
 

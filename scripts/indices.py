@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Borrador de índices: nombres, citas bíblicas, refs [NNN], sesiones.
-Uso: python3 indices.py  →  lotes/INDICES-borrador.md (para curaduría).
+Uso (desde la raíz): python3 scripts/indices.py  →  docs/INDICES-borrador.md (para curaduría).
 """
 import re
 from pathlib import Path
 from collections import defaultdict
 
-LOTES = Path(__file__).parent
-lotes = [LOTES / f'lote{i}-pp*.md'.replace('*', a) for i, a in
+EDIDIR = Path(__file__).parent.parent / 'edicion'
+DOCS = Path(__file__).parent.parent / 'docs'
+lotes = [EDIDIR / f'lote{i}-pp*.md'.replace('*', a) for i, a in
          [(1, '055-109'), (2, '110-164'), (3, '165-218')]]
 
 def pages_of(pat, flags=0):
@@ -65,5 +66,5 @@ L.append('## Sesiones (días y horas)')
 for f in lotes:
     for m in re.finditer(r'(Die \w+ \w+ mensis \w+|Hora \w+.*?disputa\w*|quarta die Julii|nona.*?Julii|Saturni|Veneris|Lunae)[^\n]{0,80}', f.read_text(encoding='utf-8')):
         L.append(f'- {m.group(0).strip()[:110]}')
-(LOTES / 'INDICES-borrador.md').write_text('\n'.join(L) + '\n', encoding='utf-8')
+(DOCS / 'INDICES-borrador.md').write_text('\n'.join(L) + '\n', encoding='utf-8')
 print('\n'.join(L[:14]), '\n... total líneas:', len(L))

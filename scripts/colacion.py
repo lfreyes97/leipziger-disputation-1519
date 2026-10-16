@@ -2,7 +2,7 @@
 """Colación transcripción ↔ OCR ABBYY (palabra por página).
 Cubre impresas 65-218 (OBJECT = PDF-1 = impresa+7). Las pp. 55-64 se colacionaron
 a ojo contra imagen (máxima garantía) y se excluyen aquí.
-Uso: python3 colacion.py  →  lotes/colacion-reporte.md
+Uso (desde la raíz): python3 scripts/colacion.py  →  docs/colacion-reporte.md
 - SOSPECHOSA-A: palabra OCR de alta confianza (>=60) ausente en la nuestra → posible omisión.
 - SOSPECHOSA-B: palabra nuestra (len>=4) ausente en OCR → posible añadido o fallo OCR.
   Ambas métricas tienen ruido (guiones, `rn/m`); el ranking prioriza revisión humana.
@@ -11,7 +11,8 @@ import re, xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
-LOTES = Path(__file__).parent
+TRANSDIR = ROOT / 'transcripcion'
+DOCS = ROOT / 'docs'
 NS = None
 
 def norm(w):
@@ -48,14 +49,14 @@ def defs_words(path):
         toks += [norm(w) for w in re.findall(r"[A-Za-zäöüÄÖÜßſ]+", d)]
     return [w for w in toks if len(w) >= 3]
 
-OBJS = ET.parse(ROOT / 'derauthentischet00eckj_djvu.xml').getroot().findall('.//OBJECT')
+OBJS = ET.parse(ROOT / 'fuentes/seitz1903/derauthentischet00eckj_djvu.xml').getroot().findall('.//OBJECT')
 assert len(OBJS) == 258, len(OBJS)
 
 rows = []
 for p in range(65, 219):
     ocr_hi = set(ocr_words(p + 7, 60))
     ocr_all = set(ocr_words(p + 7, 0))
-    ours = set(our_words(LOTES / f'pp-{p:03d}.md')) | set(defs_words(LOTES / f'pp-{p:03d}.md'))
+    ours = set(our_words(TRANSDIR / f'pp-{p:03d}.md')) | set(defs_words(TRANSDIR / f'pp-{p:03d}.md'))
     miss = sorted(w for w in ocr_hi - ours if len(w) >= 4)          # A: OCR seguro que nos falta
     extra = sorted(w for w in ours - ocr_all if len(w) >= 4)        # B: nuestro no visto por OCR
     rows.append((p, miss, extra))
@@ -73,7 +74,7 @@ L.append('')
 L.append('## Top-B (revisar añadidos)')
 for p, miss, extra in rows_B:
     L.append(f'- p.{p}: {len(extra)} → {", ".join(extra[:14])}')
-(LOTES / 'colacion-reporte.md').write_text('\n'.join(L) + '\n', encoding='utf-8')
+(DOCS / 'colacion-reporte.md').write_text('\n'.join(L) + '\n', encoding='utf-8')
 print('\n'.join(L[:12]))
 print('...')
 med_A = sorted(len(r[1]) for r in rows)[len(rows)//2]

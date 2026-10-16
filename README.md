@@ -15,20 +15,14 @@ cero claves duplicadas) + colación contra OCR y segunda pasada humana en las
 
 | Ruta | Qué es |
 |---|---|
-| `derauthentischet00eckj.pdf` (+ `.xml`, `_djvu.txt`, `_hocr.html`, `_meta.xml`, `_scandata.xml`, `_marc.xml`) | Facsímil y OCR de Seitz 1903 (Internet Archive, `derauthentischet00eckj`) |
-| `hase1827_10773137bsb.*` | Facsímil y OCR de Hase 1827 (Múnich BSB, Freiburg; sin transcribir aún) |
-| `lotes/pp-*.md` (154) + `output-test/test-p0*.md` | Transcripción latina página por página (impresas 55–218) |
-| `lotes/trad-pp-*.md` (154) + `lotes/trad-t0*.md` | Traducción española, mismo aparato y segmentación |
-| `lotes/lote{1,2,3}-pp*.md`, `lotes/trad{1,2,3}-pp*.md` | Lotes ensamblados latín/español |
-| `lotes/lec*.md`, `lotes/lectrad*.md` | Versiones de lectura (sin aparato) |
-| `lotes/edicion-latina.pdf`, `edicion-espanola.pdf` | Edición crítica (XeLaTeX, etiquetas originales) |
-| `lotes/lectura-latina.pdf`, `lectura-espanola.pdf` | Edición de lectura (oradores como encabezados) |
-| `lotes/intro-pp-*.md` | Introducción de Seitz (impresas 1–11) |
-| `lotes/ESTUDIO-PRELIMINAR.md`, `INDICES-borrador.md` | Paratextos (borrador) |
-
-Método y convenciones: `system-prompt.md`, `prompt-transcripcion.md`,
-`lotes/CONVENCIONES.md`, `lotes/TRADUCCION.md`, `lotes/PLAN-EDITORIAL.md`,
-`lotes/RESOLUCIONES.md` (6 anomalías del impreso, documentadas).
+| `fuentes/seitz1903/` | Facsímil y OCR de Seitz 1903 (Internet Archive, `derauthentischet00eckj`) |
+| `fuentes/hase1827/` | Facsímil y OCR de Hase 1827 (Múnich BSB; sin transcribir aún) |
+| `transcripcion/` | Latín página por página: `pp-065…218.md`, `intro-pp-001…011.md`, piloto `test-p0*.md` |
+| `traduccion/` | Español: `trad-pp-*.md`, `trad-t0*.md` (mismo aparato y segmentación) |
+| `edicion/` | Lotes ensamblados (`lote*`, `trad*`, `lec*`), TeX y PDFs crítica/lectura |
+| `prueba/` | Piloto de 10 pp.: recorte PDF + maestras XeLaTeX/Typst |
+| `scripts/` | `ensamblar.py`, `md2tex.py`, `md2lectura.py`, `colacion.py`, `indices.py` |
+| `docs/` | Método: convenciones, prompts, plan, resoluciones, colación, estudio, índices |
 
 ## Cómo se hizo (transparencia)
 

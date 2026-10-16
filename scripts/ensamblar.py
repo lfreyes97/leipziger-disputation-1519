@@ -13,7 +13,10 @@ Reglas:
 import re, sys
 from pathlib import Path
 
-LOTES = Path(__file__).parent
+ROOT = Path(__file__).parent.parent
+TRANSDIR = ROOT / 'transcripcion'
+TRADDIR = ROOT / 'traduccion'
+EDIDIR = ROOT / 'edicion'
 
 def load(p):
     return p.read_text(encoding='utf-8').strip() + '\n'
@@ -81,26 +84,25 @@ if __name__ == '__main__':
         # tramo test traducido + páginas traducidas (claves ya únicas, sin prefijos)
         for t in ['trad-t01', 'trad-t01b', 'trad-t02', 'trad-t03', 'trad-t04', 'trad-t05']:
             if a < 65:
-                files.append(LOTES / f'{t}.md'); ids.append(None)
+                files.append(TRADDIR / f'{t}.md'); ids.append(None)
         for p in range(max(a, 65), b + 1):
-            files.append(LOTES / f'trad-pp-{p:03d}.md'); ids.append(None)
-        dest = LOTES / f'{name}-pp{a:03d}-{b:03d}.md'
+            files.append(TRADDIR / f'trad-pp-{p:03d}.md'); ids.append(None)
+        dest = EDIDIR / f'{name}-pp{a:03d}-{b:03d}.md'
     else:
         # fragmentos test ya hechos cubren 55-64
-        testmap = [('output-test/test-p01.md', 't01'), ('output-test/test-p01b.md', 't01b'),
-                   ('output-test/test-p02.md', 't02'), ('output-test/test-p03.md', 't03'),
-                   ('output-test/test-p04.md', 't04'), ('output-test/test-p05.md', 't05')]
-        root = LOTES.parent
+        testmap = [('test-p01.md', 't01'), ('test-p01b.md', 't01b'),
+                   ('test-p02.md', 't02'), ('test-p03.md', 't03'),
+                   ('test-p04.md', 't04'), ('test-p05.md', 't05')]
         if a < 65:
             for f, tag in testmap:
-                files.append(root / f); ids.append(tag)
+                files.append(TRANSDIR / f); ids.append(tag)
         for p in range(max(a, 65), b + 1):
-            files.append(LOTES / f'pp-{p:03d}.md'); ids.append(None)  # ya namespaced por página
-        dest = LOTES / f'{name}-pp{a:03d}-{b:03d}.md'
+            files.append(TRANSDIR / f'pp-{p:03d}.md'); ids.append(None)  # ya namespaced por página
+        dest = EDIDIR / f'{name}-pp{a:03d}-{b:03d}.md'
     missing = [str(f) for f in files if not f.exists()]
     if missing:
         print('FALTAN:', *missing); sys.exit(2)
     out = assemble(files, ids)
-    dest = LOTES / f'{name}-pp{a:03d}-{b:03d}.md'
+    dest = EDIDIR / f'{name}-pp{a:03d}-{b:03d}.md'
     dest.write_text(out, encoding='utf-8')
     print('escrito', dest, len(out), 'chars')

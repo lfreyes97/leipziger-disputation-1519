@@ -26,9 +26,10 @@ cero claves duplicadas) + colación contra OCR y segunda pasada humana en las
 
 ## Cómo se hizo (transparencia)
 
-1. Transcripción asistida por IA (agentes paralelos por tramos de ~10 pp.,
-   desde renderizados del PDF a 175–200 dpi), con convenciones fijas y
-   ejemplo oro. Mapeo verificado: PDF = impresa + 8.
+1. Transcripción asistida por IA con OpenCode Desktop (modelo Muse, variante
+   xhigh): agentes paralelos por tramos de ~10 pp., desde renderizados del
+   PDF a 175–200 dpi, con convenciones fijas y ejemplo oro. Mapeo
+   verificado: PDF = impresa + 8.
 2. Integridad verificada por script (`lotes/ensamblar.py --check`): cada
    llamada `[^PPP-N]` tiene su definición; ensamblaje determinista con
    unión de guiones de fin de página.

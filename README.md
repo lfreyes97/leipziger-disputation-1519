@@ -26,26 +26,28 @@ cero claves duplicadas) + colación contra OCR y segunda pasada humana en las
 
 ## Cómo se hizo (transparencia)
 
-1. Transcripción asistida por IA con OpenCode Desktop (modelo Muse, variante
-   xhigh): agentes paralelos por tramos de ~10 pp., desde renderizados del
-   PDF a 175–200 dpi, con convenciones fijas y ejemplo oro. Mapeo
-   verificado: PDF = impresa + 8.
-2. Integridad verificada por script (`lotes/ensamblar.py --check`): cada
+1. Transcripción íntegramente con IA (OpenCode Desktop, modelo Muse,
+   variante xhigh): agentes paralelos por tramos de ~10 pp., desde
+   renderizados del PDF a 175–200 dpi, con convenciones fijas y ejemplo oro.
+   Mapeo verificado: PDF = impresa + 8.
+2. Integridad verificada por script (`scripts/ensamblar.py --check`): cada
    llamada `[^PPP-N]` tiene su definición; ensamblaje determinista con
    unión de guiones de fin de página.
-3. Colación automática contra el OCR ABBYY (`lotes/colacion.py` → informe):
+3. Colación automática contra el OCR ABBYY (`scripts/colacion.py` → informe):
    mediana de divergencia A=4/B=11 por página (ruido de fondo).
-4. Segunda pasada humana contra el impreso en las 20 páginas más
-   divergentes → 3 errores reales corregidos (`anxiis`, `consessu`,
-   `probavimus`). El resto, basura OCR confirmada.
-5. Traducción asistida por IA desde la transcripción (no desde imagen),
-   aparato copiado literal; cotejo latín↔español: 10 llamadas repuestas.
+4. Segunda pasada también con IA (agentes revisores contra el impreso) en
+   las 20 páginas más divergentes → 3 correcciones aplicadas (`anxiis`,
+   `consessu`, `probavimus`), más una línea omitida en p.154 detectada al
+   revisar un empalme. El resto, basura OCR confirmada.
+5. Traducción con IA desde la transcripción (no desde imagen), aparato
+   copiado literal; cotejo latín↔español por script: 10 llamadas repuestas.
 6. Derivados TeX 100 % deterministas (`md2tex.py`, `md2lectura.py`); nunca
    se edita un `.tex` a mano: la fuente canónica es el Markdown.
 
-Límites conocidos: la segunda pasada humana cubrió 20/164 páginas; la
-traducción tiene revisión de claves completa pero revisión filológica solo
-por muestreo; los índices están sin curar.
+Límites conocidos: no ha habido revisión humana sistemática; el responsable
+ha leído páginas sueltas sin colación completa. La traducción tiene
+revisión de claves completa pero revisión filológica solo por muestreo; los
+índices están sin curar.
 
 ## Compilar
 

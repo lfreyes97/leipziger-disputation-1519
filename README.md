@@ -1,68 +1,112 @@
 # Disputa de Leipzig (1519) — Lutero contra Eck
 
-Transcripción diplomática, traducción al español y ediciones en LaTeX del
-debate Lutero–Eck (4–14 de julio de 1519), a partir de la edición de
-Otto Seitz, *Der authentische Text der Leipziger Disputation* (Berlín, 1903).
+Transcripción latina, traducción al español y ediciones de la Disputa de
+Leipzig (4–14 de julio de 1519) a partir de Otto Seitz, *Der authentische
+Text der Leipziger Disputation* (Berlín, 1903), pp. 55–218.
+
+> **Aviso: este texto lo hizo una IA y no ha tenido revisión humana
+> sistemática.**
+> La transcripción del latín y la traducción al español las produjo un
+> modelo de IA. Tienen verificaciones automáticas (ver más abajo), pero nadie
+> las ha cotejado de principio a fin contra el facsímil. Hay errores que aún
+> no se han encontrado. No cites este texto como edición crítica sin
+> comprobar el pasaje en Seitz. Si encuentras un error, abre un *issue*.
 
 ## Estado
 
-Edición de trabajo: 164 páginas impresas (55–218), ~3000 notas de aparato,
-verificación automática de integridad al 100 % (cero llamadas sin definición,
-cero claves duplicadas) + colación contra OCR y segunda pasada humana en las
-20 páginas más divergentes (3 errores reales corregidos).
-
-## Contenido
-
-| Ruta | Qué es |
+| Parte | Estado |
 |---|---|
+| Transcripción latina, pp. 55–218 (164 páginas impresas) | Hecha con IA; sin revisión humana sistemática |
+| Traducción al español, pp. 55–218 | Hecha con IA desde la transcripción; revisión filológica solo por muestreo |
+| Aparato de notas | 2788 notas en las pp. 65–218; verificadas por script (ninguna llamada sin definición ni clave duplicada) |
+| Introducción de Seitz (impresas 1–11) | Transcrita; sin traducir |
+| Estudio preliminar (`docs/ESTUDIO-PRELIMINAR.md`) | **Borrador de IA** con pasajes marcados «no verificado»; no es texto definitivo |
+| Índices (`docs/INDICES-borrador.md`) | Borrador automático, sin curar |
+| Ediciones en PDF | En preparación (esta rama pasa la composición a Typst) |
+| Hase 1827 (`fuentes/hase1827/`) | Solo el facsímil; sin transcribir |
+
+## Ramas
+
+- **`typst`** (rama por defecto): composición con Typst.
+- **`latex`**: composición con XeLaTeX, conservada como alternativa.
+
+Las dos comparten las mismas fuentes en Markdown (`transcripcion/`,
+`traduccion/`) y se diferencian solo en los archivos de composición.
+
+## Qué hay en el repositorio
+
+| Ruta | Contenido |
+|---|---|
+| `transcripcion/` | Latín, una página impresa por archivo (`pp-065.md` … `pp-218.md`), la introducción de Seitz (`intro-pp-*.md`) y el piloto (`test-p0*.md`) |
+| `traduccion/` | Español, con la misma segmentación y el mismo aparato (`trad-pp-*.md`) |
+| `edicion/` | Lotes ensamblados desde las páginas (`lote*`, `trad*`, `lec*`, `lectrad*`) |
 | `fuentes/seitz1903/` | Facsímil y OCR de Seitz 1903 (Internet Archive, `derauthentischet00eckj`) |
-| `fuentes/hase1827/` | Facsímil y OCR de Hase 1827 (Múnich BSB; sin transcribir aún) |
-| `transcripcion/` | Latín página por página: `pp-065…218.md`, `intro-pp-001…011.md`, piloto `test-p0*.md` |
-| `traduccion/` | Español: `trad-pp-*.md`, `trad-t0*.md` (mismo aparato y segmentación) |
-| `edicion/` | Lotes ensamblados (`lote*`, `trad*`, `lec*`), TeX y PDFs crítica/lectura |
-| `prueba/` | Piloto de 10 pp.: recorte PDF + maestras XeLaTeX/Typst |
-| `scripts/` | `ensamblar.py`, `md2tex.py`, `md2lectura.py`, `colacion.py`, `indices.py` |
-| `docs/` | Método: convenciones, prompts, plan, resoluciones, colación, estudio, índices |
+| `fuentes/hase1827/` | Facsímil y OCR de Hase 1827 (Biblioteca Estatal de Baviera) |
+| `prueba/` | Piloto de 10 páginas con plantilla maestra |
+| `scripts/` | Ensamblado, colación contra OCR, índices y conversores |
+| `docs/` | Método: convenciones, prompts, plan editorial, resoluciones de anomalías, informe de colación |
 
-## Cómo se hizo (transparencia)
+Para citar un pasaje, usa la página impresa de Seitz. El PDF del facsímil
+tiene 8 páginas más (PDF = impresa + 8).
 
-1. Transcripción íntegramente con IA (OpenCode Desktop, modelo Muse,
-   variante xhigh): agentes paralelos por tramos de ~10 pp., desde
-   renderizados del PDF a 175–200 dpi, con convenciones fijas y ejemplo oro.
-   Mapeo verificado: PDF = impresa + 8.
-2. Integridad verificada por script (`scripts/ensamblar.py --check`): cada
-   llamada `[^PPP-N]` tiene su definición; ensamblaje determinista con
-   unión de guiones de fin de página.
-3. Colación automática contra el OCR ABBYY (`scripts/colacion.py` → informe):
-   mediana de divergencia A=4/B=11 por página (ruido de fondo).
-4. Segunda pasada también con IA (agentes revisores contra el impreso) en
-   las 20 páginas más divergentes → 3 correcciones aplicadas (`anxiis`,
-   `consessu`, `probavimus`), más una línea omitida en p.154 detectada al
-   revisar un empalme. El resto, basura OCR confirmada.
-5. Traducción con IA desde la transcripción (no desde imagen), aparato
-   copiado literal; cotejo latín↔español por script: 10 llamadas repuestas.
-6. Derivados TeX 100 % deterministas (`md2tex.py`, `md2lectura.py`); nunca
-   se edita un `.tex` a mano: la fuente canónica es el Markdown.
+## Cómo se hizo
 
-Límites conocidos: no ha habido revisión humana sistemática; el responsable
-ha leído páginas sueltas sin colación completa. La traducción tiene
-revisión de claves completa pero revisión filológica solo por muestreo; los
-índices están sin curar.
+1. **Transcripción con IA** (OpenCode Desktop, modelo Muse, variante xhigh):
+   agentes en paralelo por tramos de unas 10 páginas, a partir de imágenes del
+   PDF a 175–200 dpi y con convenciones fijas (`docs/CONVENCIONES.md`).
+2. **Integridad por script** (`scripts/ensamblar.py --check`): cada llamada de
+   nota `[^PPP-N]` tiene su definición, y el ensamblado de las páginas es
+   determinista, con unión de guiones de fin de página.
+3. **Colación automática contra el OCR** (`scripts/colacion.py`, informe en
+   `docs/colacion-reporte.md`). Por página, la mediana es de 4 palabras que
+   el OCR tiene y la transcripción no (posibles omisiones) y de 11 que tiene
+   la transcripción y el OCR no (posibles añadidos o fallos del OCR). Es
+   ruido de fondo esperado.
+4. **Segunda pasada, también con IA**, sobre las 20 páginas más divergentes.
+   Corrigió 3 errores (`anxiis`, `consessu`, `probavimus`) y una línea omitida
+   en la p. 154, hallada al revisar un empalme. El resto de divergencias
+   eran errores del OCR.
+5. **Traducción con IA** desde la transcripción, no desde la imagen, con el
+   aparato copiado literalmente. Un cotejo por script repuso 10 llamadas de
+   nota.
+6. **Derivados deterministas.** Los archivos de composición se generan desde
+   el Markdown y no se editan a mano. La fuente canónica es el Markdown.
+
+### Límites conocidos
+
+- No hay revisión humana sistemática. El responsable de la edición ha leído
+  páginas sueltas, sin colación completa.
+- La colación compara contra un OCR, no contra la imagen. Un error que el OCR
+  repite de la misma manera pasa desapercibido.
+- La traducción no tiene un glosario fijo de términos técnicos, así que puede
+  haber traducciones inconsistentes entre pasajes.
+- La transcripción es diplomática: la errata del original se conserva con
+  `(so!)` o un aviso, y no se corrige en silencio.
+
+## Cómo reportar un error
+
+Abre un *issue* indicando:
+
+1. La **página impresa** de Seitz (no la del PDF).
+2. La **línea** o la palabra afectada.
+3. Lo que dice **este repositorio** y lo que dice **el facsímil**.
+4. Si es un error de transcripción (latín) o de traducción (español).
+
+Cada corrección aceptada se registra en `docs/`.
 
 ## Compilar
 
-```sh
-cd lotes
-python3 ensamblar.py lote1 55 109   # + lote2/lote3, trad1/2/3
-python3 md2tex.py lote1-pp055-109.md > lote1.tex  # + resto
-xelatex edicion-latina.tex   # x2; idem edicion-espanola, lectura-*
-```
+La composición en Typst está en preparación y todavía no hay un comando de
+compilación estable. La rama `latex` tiene el flujo anterior con XeLaTeX, con
+sus instrucciones.
 
-Requiere: `poppler-utils` (pdftoppm), TeX Live con `xelatex`, fuente
-Libertinus Serif. Sin dependencias de red ni APIs.
+Los scripts de `scripts/` requieren Python 3 y no usan red ni APIs.
 
 ## Licencia
 
-- Facsímiles y OCR fuente: dominio público (Seitz 1903; Hase 1827).
-- Transcripciones, traducciones, scripts y ediciones de este repo: CC0 1.0
-  (ver `LICENSE`). Úsese, cópiese y mejórese libremente.
+- **Facsímiles y OCR de las fuentes:** dominio público (Seitz 1903, Hase 1827).
+  Los archivos originales proceden de Internet Archive y de la Biblioteca
+  Estatal de Baviera; consulta sus condiciones de uso.
+- **Transcripciones, traducciones, scripts y ediciones de este repositorio:**
+  CC0 1.0 (ver `LICENSE`). Puedes usarlos, copiarlos y modificarlos sin
+  permiso ni atribución.

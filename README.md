@@ -110,8 +110,7 @@ Los archivos de `edicion/lotes/` y `edicion/fragmentos/` son derivados y no se
 editan a mano; la fuente canónica es el Markdown de `transcripcion/` y
 `traduccion/`.
 
-Para compilar una sola edición,
-cada una se compila por separado:
+Para compilar una sola edición:
 
 ```sh
 cd edicion

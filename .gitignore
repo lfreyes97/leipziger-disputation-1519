@@ -1,12 +1,6 @@
-# Build LaTeX
-*.aux
-*.log
-*.toc
-*.out
-*.fls
-*.fdb_latexmk
-*.synctex.gz
-*.xdv
+# Compilación Typst: los PDF finales van como release, no al repo
+build/
+edicion/*.pdf
 # Python
 __pycache__/
 *.pyc
@@ -14,5 +8,3 @@ __pycache__/
 .DS_Store
 *~
 *.swp
-# Renders temporales (se regeneran con pdftoppm)
-# /tmp/opencode/leipzig/

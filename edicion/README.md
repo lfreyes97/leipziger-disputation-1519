@@ -6,6 +6,7 @@
 | `lectura-latina.typ`, `lectura-espanola.typ` | Ediciones de lectura (sin aparato) |
 | `comun/` | `lib.typ` (clase y maqueta), `aparato.typ` (notas y referencias), `portada.typ`, `legales.typ`, `logo-presuposicionalismo.typ` |
 | `lotes/` | Markdown ensamblado desde `transcripcion/` y `traduccion/` (`ensamblar.py`) y versiones de lectura (`md2lectura.py`) |
+| `tablas/` | Tablas formateadas a mano (`<documento>-<n>.typ`): sustituyen al formato automático de `md2prosa.py` |
 | `fragmentos/` | Typst generado desde `lotes/` (`md2typ.py`, `md2lectura.py`) |
 
 `titulos.typ` fija el aspecto de los encabezados (capítulo, sección y orador), `cabeceras.typ` el de la cabecera y el pie (el pie dice quién habla) y `indice.typ`

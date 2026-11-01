@@ -22,7 +22,7 @@ Text der Leipziger Disputation* (Berlín, 1903), pp. 55–218.
 | Introducción de Seitz (impresas 1–11) | Transcrita; sin traducir |
 | Estudio preliminar (`docs/ESTUDIO-PRELIMINAR.md`) | **Borrador de IA** con pasajes marcados «no verificado»; no es texto definitivo |
 | Índices (`docs/INDICES-borrador.md`) | Borrador automático, sin curar |
-| Ediciones en PDF | En preparación (esta rama pasa la composición a Typst) |
+| Ediciones en PDF | Cuatro, compiladas con Typst desde `scripts/construir.sh` (crítica y lectura, latina y española); se publican como *release*, no en el repo |
 | Hase 1827 (`fuentes/hase1827/`) | Solo el facsímil; sin transcribir |
 
 ## Ramas
@@ -95,11 +95,28 @@ Cada corrección aceptada se registra en `docs/`.
 
 ## Compilar
 
-La composición en Typst está en preparación y todavía no hay un comando de
-compilación estable. La rama `latex` tiene el flujo anterior con XeLaTeX, con
-sus instrucciones.
+Requiere Python 3 y Typst 0.15, más los paquetes locales `documentclass` y
+`instatypst` (portada, legales y ornamentos; instalados como `@local`) y las
+fuentes IM FELL e Libertinus Serif. Desde la raíz del repositorio:
 
-Los scripts de `scripts/` requieren Python 3 y no usan red ni APIs.
+```sh
+FONTS=/ruta/a/Fonts scripts/construir.sh
+```
+
+El script regenera los fragmentos Typst desde el Markdown (`md2typ.py`,
+`md2lectura.py`) y compila en `build/` las cuatro ediciones:
+`edicion-latina`, `edicion-espanola`, `lectura-latina` y `lectura-espanola`.
+Los `.typ` de `edicion/` generados desde el Markdown (`lote*`, `trad*`, `lec*`,
+`lectrad*`) no se editan a mano; la fuente canónica es el Markdown.
+
+Para otro paso, cada edición se compila por separado:
+
+```sh
+cd edicion
+typst compile --ignore-system-fonts --font-path "$FONTS" edicion-latina.typ ../build/edicion-latina.pdf
+```
+
+El flujo anterior con XeLaTeX está en la rama `latex`.
 
 ## Licencia
 

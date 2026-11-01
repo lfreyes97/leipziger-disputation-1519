@@ -7,7 +7,7 @@ método y comprobar que funcionaba de principio a fin.
 ## Qué se probó
 
 - **Convenciones de transcripción** (`docs/CONVENCIONES.md`). El ejemplo de
-  referencia es `transcripcion/test-p03.md`.
+  referencia es `transcripcion/test/test-p03.md`.
 - **Aparato de notas** con claves únicas. En el piloto las claves de nota
   chocaban entre fragmentos (`[^12]` en varios), lo que dio lugar a las
   decisiones 5 y 6 de `docs/RESOLUCIONES.md`: sufijos donde la numeración del
@@ -15,7 +15,7 @@ método y comprobar que funcionaba de principio a fin.
 - **Empalmes entre páginas**: un fragmento cruza el salto de la 61 a la 62 a
   mitad de frase. De ahí salió la unión de guiones de fin de página que hace
   `scripts/ensamblar.py`.
-- **Traducción** con el mismo aparato y segmentación (`traduccion/trad-t0*.md`).
+- **Traducción** con el mismo aparato y segmentación (`traduccion/test/trad-t0*.md`).
 - **Composición**: una plantilla maestra para el piloto en XeLaTeX y otra en
   Typst (A4, Libertinus Serif, latín justificado, notas al pie).
 
@@ -26,10 +26,10 @@ desde ellos:
 
 | Fragmento | Páginas impresas |
 |---|---|
-| `transcripcion/test-p01.md`, `test-p01b.md`, `test-p02.md` | 55–58 (reparto exacto por confirmar) |
-| `transcripcion/test-p03.md` | 59–60 |
-| `transcripcion/test-p04.md` | 61–62 |
-| `transcripcion/test-p05.md` | 63–64 |
+| `transcripcion/test/test-p01.md`, `test-p01b.md`, `test-p02.md` | 55–58 (reparto exacto por confirmar) |
+| `transcripcion/test/test-p03.md` | 59–60 |
+| `transcripcion/test/test-p04.md` | 61–62 |
+| `transcripcion/test/test-p05.md` | 63–64 |
 
 La correspondencia de páginas es la que indican los comentarios de cada
 archivo; confírmala contra el facsímil antes de citarla. Las pp. 65 en

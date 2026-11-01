@@ -43,8 +43,8 @@ Las dos comparten las mismas fuentes en Markdown (`transcripcion/`,
 
 | Ruta | Contenido |
 |---|---|
-| `transcripcion/` | Latín, una página impresa por archivo (`pp-065.md` … `pp-218.md`), la introducción de Seitz (`intro-pp-*.md`) y el piloto (`test-p0*.md`) |
-| `traduccion/` | Español, con la misma segmentación y el mismo aparato (`trad-pp-*.md`) |
+| `transcripcion/` | Latín, una página impresa por archivo (`pp-065.md` … `pp-218.md`), la introducción de Seitz (`intro-pp-*.md`) y, en `test/`, el piloto (pp. 55–64, `test-p0*.md`) |
+| `traduccion/` | Español, con la misma segmentación y el mismo aparato (`trad-pp-*.md`; el piloto, en `test/`) |
 | `edicion/` | Composición en Typst: las cuatro maestras, `comun/` (clase, aparato, portada, legales), `lotes/` (Markdown ensamblado) y `fragmentos/` (Typst generado) |
 | `fuentes/seitz1903/` | Facsímil y OCR de Seitz 1903 (Internet Archive, `derauthentischet00eckj`) |
 | `fuentes/hase1827/` | Facsímil y OCR de Hase 1827 (Biblioteca Estatal de Baviera) |

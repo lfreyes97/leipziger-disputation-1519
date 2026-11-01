@@ -84,7 +84,7 @@ if __name__ == '__main__':
         # tramo test traducido + páginas traducidas (claves ya únicas, sin prefijos)
         for t in ['trad-t01', 'trad-t01b', 'trad-t02', 'trad-t03', 'trad-t04', 'trad-t05']:
             if a < 65:
-                files.append(TRADDIR / f'{t}.md'); ids.append(None)
+                files.append(TRADDIR / 'test' / f'{t}.md'); ids.append(None)
         for p in range(max(a, 65), b + 1):
             files.append(TRADDIR / f'trad-pp-{p:03d}.md'); ids.append(None)
         dest = EDIDIR / f'{name}-pp{a:03d}-{b:03d}.md'
@@ -95,7 +95,7 @@ if __name__ == '__main__':
                    ('test-p04.md', 't04'), ('test-p05.md', 't05')]
         if a < 65:
             for f, tag in testmap:
-                files.append(TRANSDIR / f); ids.append(tag)
+                files.append(TRANSDIR / 'test' / f); ids.append(tag)
         for p in range(max(a, 65), b + 1):
             files.append(TRANSDIR / f'pp-{p:03d}.md'); ids.append(None)  # ya namespaced por página
         dest = EDIDIR / f'{name}-pp{a:03d}-{b:03d}.md'

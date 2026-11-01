@@ -1,7 +1,7 @@
 # CONVENCIONES — Lotes Luther-Eck (Seitz 1903, solo Markdown)
 
 Fuente: `derauthentischet00eckj.pdf`. Debate II (Lutero-Eck): impresas 55–218 = PDF 63–226 (PDF = impresa + 8).
-Ejemplo oro: `transcripcion/test-p03.md`. Reglas madre: `docs/system-prompt.md` (sin marginalia; aquí solo aplica lo latino).
+Ejemplo oro: `transcripcion/test/test-p03.md`. Reglas madre: `docs/system-prompt.md` (sin marginalia; aquí solo aplica lo latino).
 
 ## Archivo por página impresa
 - `transcripcion/pp-PPP.md` (PPP = 3 dígitos, ej. `pp-065.md`). Sin frontmatter: empieza directo con el cuerpo.

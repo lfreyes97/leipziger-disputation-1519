@@ -22,7 +22,7 @@ Si una palabra del facsímil es dudosa, dilo en lugar de adivinar.
 ## Proponer una corrección (PR)
 
 - Edita el Markdown fuente: `transcripcion/pp-PPP.md` o `traduccion/trad-pp-PPP.md`.
-  Las pp. 55–64 están en `transcripcion/test-p0*.md` y `traduccion/trad-t0*.md`.
+  Las pp. 55–64 están en `transcripcion/test/` y `traduccion/test/`.
 - No edites a mano `edicion/lotes/` ni `edicion/fragmentos/`: son derivados y
   se regeneran con `scripts/construir.sh`.
 - Respeta `docs/CONVENCIONES.md` (claves de nota, aparato, erratas del impreso).

@@ -44,11 +44,9 @@
   legales
   // sin portada ni legales (--input portada=no) la nota va suelta
   if not con-portada and nota != none { nota }
-  // paratextos: estudio preliminar e introducción de Seitz (traducida)
-  [= Estudio preliminar]
-  include "../fragmentos/estudio.typ"
-  [= Introducción de Otto Seitz (1903)]
-  [#emph[Traducción al español de la introducción de Seitz (pp. 1--11). Elaborada con IA, sin revisión humana sistemática.]]
+  // estudio preliminar: traducción del estudio introductorio de Seitz (pp. 1-11)
+  [= Estudio preliminar de Otto Seitz (1903)]
+  [#emph[Traducción al español del estudio introductorio de Seitz (pp. 1--11). Elaborada con IA, sin revisión humana sistemática.]]
   include "../fragmentos/intro.typ"
   show: main
   cuerpo

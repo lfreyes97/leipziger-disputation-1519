@@ -6,7 +6,9 @@ En el nombre del Señor. Amén. En el año de la encarnación del mismo M. D. XI
 
 El señor D. Martín comenzó de este modo.
 
-«En el nombre del Señor. Amén. Abrazo y sigo la protestación de ambos egregios señores, tanto de Andrés Carlstadt como de Juan Eck. Añado solo esto: que por reverencia al sumo pontífice y a la Iglesia romana de buen grado habría omitido esta materia, innecesaria y extrañamente odiosa, si no hubiese sido arrastrado a ella por la proposición del egregio señor doctor Juan Eck.
+«En el nombre del Señor. Amén. Abrazo y sigo la protestación de ambos egregios señores, tanto de Andrés Carlstadt como de Juan Eck. Añado solo esto: que por reverencia al sumo pontífice y a la Iglesia romana de buen grado habría omitido esta materia,
+
+innecesaria y extrañamente odiosa, si no hubiese sido arrastrado a ella por la proposición del egregio señor doctor Juan Eck.
 
 Lamento también que no estén presentes aquellos a quienes más convenía; ellos, que en privado y en público tantas veces me han difamado con la acusación de herejía, ahora, cuando urge el conocimiento de la causa, se han sustraído; me refiero a los inquisidores de la depravación herética, que pospusieron la amonestación fraterna y la doctrina a sus acusaciones.
 
@@ -495,3 +497,4 @@ En otro artículo: «la división inmediata de las obras humanas» etc., la cual
 A la cosa.
 
 Ese artículo nunca lo reputé, nunca lo reputaré cristiano, y por esto lo rechacé siguiendo a Gregorio de Arim. 28 dist. 2. Ni se trató entre nosotros si «puede» darse obra indiferente, o si toda vida de los infieles es pecado, y cosas semejantes que miran a este artículo. Por eso, lo que insinúa paliando los errores husitas: que alguna vez las palabras se entienden siniestramente, como le aconteció al Señor Cristo, las cuales —pregunto—, ¿qué comparación de la luz con Belial? que compara en esto a Juan Hus con Cristo, no habiendo sufrido que yo, en cuanto a la sugilación de la verdad parcialmente admitida, comparase los sacros #refimp("296") concilios con las sagradas escrituras, en los cuales, en unos y otras, hay verdad indudable e infalible. Pues a ningún cristiano debe mover lo que dice: que los concilios son hombres y así criaturas, y por tanto pueden pecar, pues si yerran —como fue el concilio Efesino condenado por el papa León, creo, como el Ariminense, el «Aquisgranense»—, entonces no son concilios, sino conciliábulos. Por lo cual más bien debemos sostener con constantísima fe que cuanto los concilios legítimamente congregados determinaron y definieron en aquello que es de fe es certísimo. Pues así Cristo permanece con nosotros hasta la consumación del siglo, y «si dos se congregaren en mi nombre etc.». Es rancio decir que, porque son hombres, en
+

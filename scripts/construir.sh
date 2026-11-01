@@ -15,7 +15,6 @@ python3 ../scripts/ensamblar.py tradintro 1 11
 
 # 2. lotes -> fragmentos Typst
 python3 ../scripts/md2typ.py lotes/tradintro-pp001-011.md --titulo-inicial > fragmentos/intro.typ
-python3 ../scripts/md2prosa.py ../docs/ESTUDIO-PRELIMINAR.md > fragmentos/estudio.typ
 for n in 1 2 3; do
   lote=$(ls lotes/lote$n-pp*.md); trad=$(ls lotes/trad$n-pp*.md); rng=${lote#lotes/lote$n-}
   python3 ../scripts/md2typ.py "$lote" > fragmentos/lote$n.typ

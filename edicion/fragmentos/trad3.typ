@@ -101,7 +101,7 @@ Además ha de añadirse#apnota("38")[M addendo, U addam.] esto: si las indulgenc
 
 Siendo, pues, indefectible la fe de la Iglesia, por la que rogó Cristo para que no desfalleciese, en Lc 22, y prometió estar con nosotros todos los días hasta la consumación del siglo en Mt 28 \[v. 20\], no ha de admitirse que la Iglesia haya errado con perdición de las almas por tanto tiempo, y porque los decretos de los sumos pontífices han de ser aceptados por todos los que tienen la comunión de la santa Iglesia, como dice #gregorio[Gregorio] en el can. Praeceptis, 12. dist., asimismo en el can. Omnia decretalia, 25.#apnota("16")[P M U 24.] q. 1. con muchos concordantes, y el pontífice moderno definió bajo pena de excomunión latae sententiae que las indulgencias son útiles para borrar la pena debida por los pecados a aquellos#apnota("18")[M U poenam peccatis debitam his (U iis).] que unidos por la caridad son miembros de Cristo, y que tal remisión se compensa como por el mérito de Cristo y de los santos, por autoridad del sumo pontífice: por todo esto quiero persuadido al fiel cristiano de que las indulgencias no son vicio de la buena obra, ni que decir que es útil a los cristianos tener indulgencias#apnota("22")[M U esse utiles esse.] sea estar loco, lo cual no es otra cosa que decir que todo el clero en la Iglesia estuvo loco por tanto tiempo.
 
-#oradornota[El D. D. Martín#apnota("24")[P D. D. Eccius.].]
+#oradornota(nombre: "El D. D. Martín.")[El D. D. Martín#apnota("24")[P D. D. Eccius.].]
 
 Con doce argumentos impugna el egregio D. D. mi conclusión undécima. A los cuales antes de responder#apnota("26")[M U respondeam.], primero diluiré aquello,
 
@@ -267,7 +267,7 @@ Por lo demás, en las palabras sixtinas#apnota("30")[M Sixtini, U Sixtinae.] y d
 
 El día martes doce del mes de julio, a la hora séptima de la mañana.
 
-#oradornota[El D. D. Eck#apnota("5")[M Die Zeitbestimmung von crastina an fehlt, Überschrift De poenitentia; U duodecima Julii argumentatus est Eccius respondente Martino de poenitentia. In nomine tuo, dulcis Jesu.].]
+#oradornota(nombre: "El D. D. Eck.")[El D. D. Eck#apnota("5")[M Die Zeitbestimmung von crastina an fehlt, Überschrift De poenitentia; U duodecima Julii argumentatus est Eccius respondente Martino de poenitentia. In nomine tuo, dulcis Jesu.].]
 
 Contra la conclusión del reverendo padre y parte de su sermón sobre la penitencia, en defensa de los óptimos padres predicadores intento probar que la verdadera penitencia comienza por el temor aun de la pena, y que bien se prepara uno#apnota("9")[M se quis praeparet.] discutiendo, recordando etc.
 
@@ -536,7 +536,7 @@ Con qué derecho o con qué felicidad de la Iglesia haya sido suprimido este mod
 Por tanto, que también se diga condenado el artículo#apnota("29")[M Proinde volo damnatos ostendere articulos.] en el concilio Constanciense acerca de estas#apnota("30")[M his.] reservaciones, no me importa bastante. Esto sé, que fue probado y reprobada esa reservación#apnota("31")[M reservatio huiusmodi.] en la primitiva Iglesia y en la institución de los apóstoles, y también ahora, como enseña la miserable experiencia de la Iglesia#apnota("32")[M experientia ecclesiae.], sería utilísimo y saludabilísimo para cohibir los pecados y quitar la detestable confusión de todos los obispados que hoy vemos. Por qué causa haya sido mudado en su tiempo, lo paso por alto. Mudable lo hallo, mudable lo dejo. Esto#apnota("35")[W. A. verbessert Mutabilem invenio. Relinquo haec.] al arbitrio de los jueces#apnota("36")[U iudicum. Hora transit.].
 
 #refimp("380")
-#oradornota[El D. D. Eck#apnota("3")[U hat hier die Zeitangabe Quarta decima die Julii mane hora septima continuavit Eccius praeter pactum; vgl. Z. 8.].]
+#oradornota(nombre: "El D. D. Eck.")[El D. D. Eck#apnota("3")[U hat hier die Zeitangabe Quarta decima die Julii mane hora septima continuavit Eccius praeter pactum; vgl. Z. 8.].]
 
 El reverendo padre desde el inicio con bastante jactancia tiene en poco lo por mí aducido, como si en nada le obstara, lo que máximamente se le opone. Pues él mismo quiso en el sermón vulgar que no se hiciera conmutación de la pena eterna en#apnota("6")[U in poenam; M aeternae mutatae in poenam.] temporal, y contradice la opinión común, como si no pudiera probarse#apnota("7")[M mutari.] que Dios exija alguna satisfacción fuera de la portación de la cruz. Y en el sermón latino alaba
 

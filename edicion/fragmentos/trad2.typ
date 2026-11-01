@@ -39,7 +39,7 @@ Como ayer se había establecido#apnota("28")[M esse, Mc esset.] en nombre del il
 
 Decía#apnota("3")[U Declarabat.] pues que no impugnaba, ni podía ser cristianamente reprobado#apnota("4")[U impugnari.] por nadie el primado y la obediencia de la Romana iglesia. Sino que había sido llevado al punto de tener que declarar que ese primado no es de derecho divino, así como tampoco puede reprobarse la potestad imperial entre los germanos#apnota("6")[U potestatem apud Germanos.], aunque no fundada en la sagrada escritura.
 
-#oradornota[El D. D. Eck.#apnota("7")[U quamvis d. Eccius.]]
+#oradornota(nombre: "El D. D. Eck.")[El D. D. Eck.#apnota("7")[U quamvis d. Eccius.]]
 
 dijo que era verdad que ésa era la controversia, si aquel primado#apnota("8")[U primatus ecclesiae Romanae.] es de derecho divino, cosa que juzgaba#apnota("9")[U constat.] reprobar como husítica y artículo condenado#apnota("10")[U condemnatur.] por el concilio Constanciense, y que habría que dolerse si los corazones de los cristianos fuesen tan fríos que nadie defendiese esto.
 
@@ -105,7 +105,7 @@ En cuanto a que al fin adujo a san Francisco, que debemos obedecer al sumo pont�
 
 Aquí el señor doctor Martín quiso pasar a objetar por las partes de oponente a él devueltas por pacto, como decía. Pero el señor doctor Eck pretendía que entre lo soluble ya se habían dicho algunas cosas a modo de oponente, las cuales primero querría disolver según la protestación sobre esto hecha. No obstante permitió que proceda ya la oposición del señor doctor Martín. Comenzó pues#apnota("34")[in U lautet der Bericht über den Zwischenfall: Hic intonuit Eccius, se obiectis velle respondere, quasi et ipse respondens fuisset. Respondit Martinus, hoc pacto nunquam finiendam disputationem, accusans Eccianam petulantiam, quae solet singula etiam verba ancupari. Contigit prorsus virgula divina, ut clementissimus Dux Georgius interesset, cuius nutu et pio sceptro concessum est Martino, impetere Eccianam conclusionem, quae contraria est huic iam discussae. In M fehlt der Bericht ganz.]
 
-#oradornota[El D. D. Martín#apnota("35")[M Martinus opponens Egregie domine doctor.].]
+#oradornota(nombre: "El D. D. Martín.")[El D. D. Martín#apnota("35")[M Martinus opponens Egregie domine doctor.].]
 
 Contra la sentencia del egregio D. D. parece militar lo que con bastante fuerza saltó al confutar, y se escribe en 1 Cor 3 \[v. 5\], donde Pablo, rebajando \[304\] la persona de todos los apóstoles, dice: ¿Qué es Apolo? ¿qué Pablo? ¿qué Cefas#apnota("2")[M Scephe.]? ministros por quienes creísteis. Donde Pablo quiere del todo quitar la ocasión de contención#apnota("3")[M contentionem, Mc contentionis.] y de cisma; niega que ninguna iglesia pertenezca a ningún apóstol, sino que todo es común a todos. De donde al fin del tercer capítulo \[3. v. 21 ff.\] dice: Todo es vuestro, sea Cefas, sea Apolo, sea Pablo#apnota("5")[M sive Pauli (so!) sive Apollo.], mas vosotros de Cristo.
 

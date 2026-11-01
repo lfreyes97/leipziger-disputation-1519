@@ -28,6 +28,16 @@
   align(center, text(font: ("EB Garamond SC 12", "Libertinus Serif"), size: 1.2em, tracking: 0.03em, cuerpo)))
 // Misma etiqueta, sin ser encabezado: para las que llevan llamada de nota (el
 // texto de la nota acabaría en el contorno del PDF).
-#let oradornota(cuerpo, pagina: none) = estilo-orador[#if pagina != none [#pag(pagina)]#cuerpo]
-#let orador(cuerpo, pagina: none) = heading(level: 4, numbering: none, outlined: true)[
-  #if pagina != none [#pag(pagina)]#cuerpo]
+// Texto plano de un contenido sencillo (para comparar nombres)
+#let aplanar(c) = if type(c) == str { c } else if c.has("text") { c.text }
+  else if c.has("children") { c.children.map(aplanar).join() } else { " " }
+
+// Cada orador deja una marca <orador> con su nombre: el pie la usa para decir quién habla.
+#let oradornota(cuerpo, nombre: none, pagina: none) = {
+  estilo-orador[#if pagina != none [#pag(pagina)]#cuerpo]
+  [#metadata(nombre) <orador>]
+}
+#let orador(cuerpo, pagina: none) = {
+  heading(level: 4, numbering: none, outlined: true)[#if pagina != none [#pag(pagina)]#cuerpo]
+  [#metadata(aplanar(cuerpo)) <orador>]
+}

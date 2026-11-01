@@ -68,8 +68,11 @@ def convertir(src, titulo=False, idioma=None):
             if ref:
                 lineas.append('\x10#refimp("%s")\x10' % ref)
             rotulo = re.sub(r'^\s*\[\d+\]\s*', '', l).strip()
-            fn = 'oradornota' if '[^' in rotulo else 'orador'   # con nota: sin encabezado
-            lineas.append('\x10#%s[\x10%s\x10]\x10' % (fn, rotulo))
+            if '[^' in rotulo:      # con nota: sin encabezado, pero con su marca de orador
+                nombre = re.sub(r'\[\^[^\]]+\]', '', rotulo).strip().replace('\\', '').replace('"', '')
+                lineas.append('\x10#oradornota(nombre: "%s")[\x10%s\x10]\x10' % (nombre, rotulo))
+            else:
+                lineas.append('\x10#orador[\x10%s\x10]\x10' % rotulo)
             continue
         # al inicio de línea, Typst interpreta -, +, =, / y "1." como marcas
         if re.match(r'^\s*([-+=/]|\d+\.)(\s|$)', l):

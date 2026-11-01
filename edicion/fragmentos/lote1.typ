@@ -14,7 +14,7 @@ Dominus D. Martinus in hunc modum orsus est#apnota("5")[U Mc haben hier: Incipit
 Doleo etiam eos non adesse, quos maxime oportuit#apnota("14")[M oportet.], Qui cum et privatim et publice toties me crimine haereseos#apnota("15")[M in haereseos.] prophanarunt, nunc cum instet cognitio causae se subtraxerunt, haereticae pravitatis inquisitores dico, qui fraternam monitionem#apnota("17")[M Lücke, Mc paternam admonitionem.] et doctrinam postposuerunt criminationibus suis.
 
 #refimp("255")
-#oradornota[Dominus doctor Eccius#apnota("3")[U Scopus. De potestate, immo de primatu Romani pontificis (Uv a. R. Additio). Eccii protestatio, Mc \[rot\] = U.].]
+#oradornota(nombre: "Dominus doctor Eccius.")[Dominus doctor Eccius#apnota("3")[U Scopus. De potestate, immo de primatu Romani pontificis (Uv a. R. Additio). Eccii protestatio, Mc \[rot\] = U.].]
 
 In nomine tuo, dulcis Jesu#apnota("4")[fehlt in M.].
 
@@ -58,7 +58,7 @@ Ultima auctoritas divi #jeronimo[Hieronymi] non recte inducitur ab egregio domin
 
 Accedit ad hoc decretum concilii Africani dist. XCIX. c. Primae: Primae, inquit, sedis episcopus non appelletur princeps sacerdotum aut summus sacerdos aut aliquid huiusmodi, sed tantum primae sedis episcopus. Universalis autem pontifex nec Romanus appelletur. Quare si divino iure staret monarchia Romani pontificis#apnota("28")[M Romana ierarchia summorum pontificum.], haec omnia essent haeretica: quod est temerarium asserere. Et in fine audiamus ipsum dominum, qui Luc. 22 \[v. 24-26\] dicit: Facta est autem contentio#apnota("31")[U contentio discipulorum.], quis eorum videretur esse maior. Dixit autem eis: Reges gentium dominantur eorum#apnota("32")[U earum.], et qui potestatem habent super eos, benefici#apnota("33")[M heretici.] vocantur: vos autem non sic, sed qui maior est vestrum, fiat sicut minor#apnota("34")[M add. Ecce hoc (haec?) est mea sententia.].
 
-#oradornota[D. D. Eccius#apnota("35")[In M beginnt mit diesem Abschnitt eine neue Seite Bl. E 3a. Auf der vorangehenden findet sich ein andrer (von Eck widerrufener?) Anfang: „Reverendus pater debens;" dann folgt ein leerer Raum von etwa 4 Zeilen.].]
+#oradornota(nombre: "D. D. Eccius.")[D. D. Eccius#apnota("35")[In M beginnt mit diesem Abschnitt eine neue Seite Bl. E 3a. Auf der vorangehenden findet sich ein andrer (von Eck widerrufener?) Anfang: „Reverendus pater debens;" dann folgt ein leerer Raum von etwa 4 Zeilen.].]
 
 Reverendus D. pater satis instructus descendit in harenam, materiam suam habens bono ordine contextam in libello impresso et per eum composito \[260\]. Quare illustres#apnota("1a")[U illustrissimae.] dominationes vestrae, magnificentiae et dominationes#apnota("1b")[M et magnificentiae statt magnificentiae et dominationes.] veniam dabunt Eccio, multo iam tempore aliis negotiis occupato, si non tam rotunde et accurate e vestigio#apnota("3a")[PU evestigio] tanta cumulare poterit, quanta#apnota("3b")[P quantam.] reverendus pater iam congessit. Venit enim disputaturus, non librum editurus. Verum quid reverendus pater dixerit, per ordinem dispiciamus.
 
@@ -361,7 +361,7 @@ Johannes Graumann Notarius ad praemissa subsignavit#apnota("4a")[Die Worte von C
 
 Ante exordium strenuus D. Caesarius Pflugk praefatus est, ut in fine post producta D. D. Martini signabitur#apnota("4b")[Zeitbestimmung und Zwischenbemerkung fehlen in M, letztere auch in U, die Zeitbestimmung lautet in U: Sexta die Julii hora septima mane].
 
-#oradornota[D. D. Martinus#apnota("5")[U Martinus exorsus est.].]
+#oradornota(nombre: "D. D. Martinus.")[D. D. Martinus#apnota("5")[U Martinus exorsus est.].]
 
 Postquam heri egregius D. D. non partis, sed iudicis officium usurpans contra conventionis pactum et voluntatem illustrissimi principis Georgii#apnota("7")[M Gerogii.], patroni nostri, me toties 'definivit et' proclamavit haereticum, cum sui officii fuisset solum adductis rationibus et auctoritatibus iudicibus relinquere, essem haereticus necne; in quo, si non est violata#apnota("10a")[M vigolata, Mc violata.] publica fides, viderint hi#apnota("10b")[U ii.], quorum interest.
 

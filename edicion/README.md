@@ -8,7 +8,7 @@
 | `lotes/` | Markdown ensamblado desde `transcripcion/` y `traduccion/` (`ensamblar.py`) y versiones de lectura (`md2lectura.py`) |
 | `fragmentos/` | Typst generado desde `lotes/` (`md2typ.py`, `md2lectura.py`) |
 
-`titulos.typ` fija el aspecto de los encabezados (capítulo, sección y orador) y `indice.typ`
+`titulos.typ` fija el aspecto de los encabezados (capítulo, sección y orador), `cabeceras.typ` el de la cabecera y el pie (el pie dice quién habla) y `indice.typ`
 el índice (`indice-entradas.json` es la tabla de entradas; `entradas.typ` se genera de ella).
 Los oradores son encabezados reales: salen en el contorno del PDF.
 

@@ -32,8 +32,23 @@
     },
     footer: context {
       if page.numbering == none { return none }
+      let p = here().page()
+      // oradores de esta página: el que habla al empezar (si continúa) y los que entran en ella
+      let fin = query(<fin-texto>)
+      let en-texto = fin.len() == 0 or fin.first().location().page() >= p
+      let marcas = query(<orador>)
+      let previos = marcas.filter(m => m.location().page() < p)
+      let aqui = marcas.filter(m => m.location().page() == p)
+      let lista = (if previos.len() > 0 { (previos.last(),) } else { () }) + aqui
+      let nombres = lista.map(m => m.value).fold((), (acc, n) => if acc.len() > 0 and acc.last() == n { acc } else { acc + (n,) })
       set text(size: 0.95em)
-      align(center, counter(page).display(page.numbering))
+      align(center, {
+        if en-texto and nombres.len() > 0 {
+          text(font: fuente, tracking: 0.04em, nombres.join([ · ]))
+          linebreak()
+        }
+        counter(page).display(page.numbering)
+      })
     },
   )
   cuerpo

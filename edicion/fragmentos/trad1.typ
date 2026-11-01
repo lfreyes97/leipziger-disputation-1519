@@ -14,7 +14,7 @@ El señor D. Martín comenzó de este modo#apnota("5")[U Mc haben hier: Incipit 
 Lamento también que no estén presentes aquellos a quienes más convenía#apnota("14")[M oportet.]; ellos, que en privado y en público tantas veces me han difamado con la acusación de herejía#apnota("15")[M in haereseos.], ahora, cuando urge el conocimiento de la causa, se han sustraído; me refiero a los inquisidores de la depravación herética, que pospusieron la amonestación fraterna#apnota("17")[M Lücke, Mc paternam admonitionem.] y la doctrina a sus acusaciones.
 
 #refimp("255")
-#oradornota[El señor doctor Eck#apnota("3")[U Scopus. De potestate, immo de primatu Romani pontificis (Uv a. R. Additio). Eccii protestatio, Mc \[rot\] = U.].]
+#oradornota(nombre: "El señor doctor Eck.")[El señor doctor Eck#apnota("3")[U Scopus. De potestate, immo de primatu Romani pontificis (Uv a. R. Additio). Eccii protestatio, Mc \[rot\] = U.].]
 
 En tu nombre, dulce Jesús#apnota("4")[fehlt in M.].
 
@@ -60,7 +60,7 @@ La última autoridad, la del divino #jeronimo[Jerónimo], no la aduce rectamente
 
 Se añade a esto el decreto del concilio africano, dist. XCIX, c. Primae: «El obispo de la primera sede —dice— no se llame príncipe de los sacerdotes ni sumo sacerdote ni nada semejante, sino solo obispo de la primera sede. Y ni siquiera el romano se llame pontífice universal». Por lo cual, si la monarquía del pontífice romano se sostuviese por derecho divino#apnota("28")[M Romana ierarchia summorum pontificum.], todo esto sería herético, lo cual es temerario afirmar. Y al final oigamos al Señor mismo, que en Lc 22 \[v. 24-26\] dice: «Se suscitó entre ellos una contienda#apnota("31")[U contentio discipulorum.] sobre quién parecía ser el mayor. Y les dijo: Los reyes de las naciones se enseñorean de ellas#apnota("32")[U earum.], y los que tienen potestad sobre ellas son llamados bienhechores#apnota("33")[M heretici.]; vosotros, en cambio, no así, sino que el mayor entre vosotros hágase como el menor#apnota("34")[M add. Ecce hoc (haec?) est mea sententia.]».
 
-#oradornota[El D. D. Eck#apnota("35")[In M beginnt mit diesem Abschnitt eine neue Seite Bl. E 3a. Auf der vorangehenden findet sich ein andrer (von Eck widerrufener?) Anfang: „Reverendus pater debens;" dann folgt ein leerer Raum von etwa 4 Zeilen.].]
+#oradornota(nombre: "El D. D. Eck.")[El D. D. Eck#apnota("35")[In M beginnt mit diesem Abschnitt eine neue Seite Bl. E 3a. Auf der vorangehenden findet sich ein andrer (von Eck widerrufener?) Anfang: „Reverendus pater debens;" dann folgt ein leerer Raum von etwa 4 Zeilen.].]
 
 El reverendo padre desciende a la arena bastante bien provisto, teniendo su materia tejida en buen orden en un libelo impreso y por él compuesto \[260\]. Por lo cual vuestras ilustres#apnota("1a")[U illustrissimae.] dominaciones, magnificencias y dominaciones#apnota("1b")[M et magnificentiae statt magnificentiae et dominationes.] perdonarán a Eck, ocupado ya desde hace mucho tiempo en otros negocios, si no pudiere acumular al instante#apnota("3a")[PU evestigio] de modo tan redondo y preciso cuantas#apnota("3b")[P quantam.] cosas ya ha amontonado el reverendo padre. Pues ha venido a disputar, no a publicar un libro. Veamos, pues, por orden qué ha dicho el reverendo padre.
 
@@ -363,7 +363,7 @@ Juan Graumann, notario, suscribió lo antedicho#apnota("4a")[Die Worte von Crast
 
 Antes del exordio el esforzado D. Cesario Pflugk pronunció un prefacio, como se señalará al final después de las pruebas aducidas del D. D. Martín.#apnota("4b")[Zeitbestimmung und Zwischenbemerkung fehlen in M, letztere auch in U, die Zeitbestimmung lautet in U: Sexta die Julii hora septima mane]
 
-#oradornota[El D. D. Martín.#apnota("5")[U Martinus exorsus est.]]
+#oradornota(nombre: "El D. D. Martín.")[El D. D. Martín.#apnota("5")[U Martinus exorsus est.]]
 
 Después de que ayer el egregio D. D., usurpando el oficio no de parte sino de juez, contra lo pactado en la convención y la voluntad del ilustrísimo príncipe Jorge#apnota("7")[M Gerogii.], nuestro patrono, me proclamara tantas veces «definido y» hereje, siendo propio de su oficio dejar, con solas razones y autoridades aducidas, a los jueces si yo era hereje o no; en lo cual, si se ha violado#apnota("10a")[M vigolata, Mc violata.] la fe pública, véanlo aquellos#apnota("10b")[U ii.] a quienes incumbe.
 

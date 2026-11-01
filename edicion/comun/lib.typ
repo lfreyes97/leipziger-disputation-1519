@@ -59,6 +59,7 @@
   show: main
   heading(numbering: none)[El debate de Lutero con Eck (4--14 de julio de 1519)]
   cuerpo
+  [#metadata(none) <fin-texto>]
   // índices (typst compile --input indice=si …): por ahora, personas
   if sys.inputs.at("indice", default: "no") == "si" {
     show: back

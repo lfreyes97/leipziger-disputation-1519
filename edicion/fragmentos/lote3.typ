@@ -101,7 +101,7 @@ Porro hoc addendum#apnota("38")[M addendo, U addam.]: Si indulgentiae sunt vitiu
 
 Cum ergo fides ecclesiae sit indefectibilis, pro qua Christus rogavit, ut non deficeret, Lucae 22, et pollicitus est, se nobiscum esse omnibus diebus usque ad consummationem saeculi Matth. 28. \[v. 20\], non est admittendum, ecclesiam cum animarum pernicie tanto tempore errasse, et quia decreta summorum pontificum ab omnibus communionem ecclesiae sanctae habentibus sunt acceptanda, ut ait #gregorio[Gregorius] can. Praeceptis, 12. distin., item can. Omnia decretalia, 25.#apnota("16")[P M U 24.] quaest. 1. cum multis concordantibus, et pontifex modernus sub poena excommunicationis latae sententiae definivit, indulgentias esse utiles ad poenam pro peccatis debitam his#apnota("18")[M U poenam peccatis debitam his (U iis).], qui charitate iungente membra sunt Christi, delendam, et quod huiusmodi remissio ex merito Christi et sanctorum, auctoritate summi pontificis, quasi compensetur: his omnibus persuasum volo Christiano fideli, indulgentias non esse vitium boni operis, nec dicere indulgentias Christiano utiles esse#apnota("22")[M U esse utiles esse.] insanire, quod nihil aliud est, quam dicere, totum clerum in ecclesia tanto tempore insanivisse.
 
-#oradornota[D. D. Martinus#apnota("24")[P D. D. Eccius.].]
+#oradornota(nombre: "D. D. Martinus.")[D. D. Martinus#apnota("24")[P D. D. Eccius.].]
 
 Duodecim argumentis impugnat egregius D. D. conclusionem meam undecimam. Ad quae priusquam respondeo#apnota("26")[M U respondeam.], primo diluam illud,
 
@@ -265,7 +265,7 @@ Porro, de verbis Sixtinis#apnota("30")[M Sixtini, U Sixtinae.] et moderni pontif
 
 Die Martis duodecima mensis Julii, hora septima antemeridiana.
 
-#oradornota[D. D. Eccius#apnota("5")[M Die Zeitbestimmung von crastina an fehlt, Überschrift De poenitentia; U duodecima Julii argumentatus est Eccius respondente Martino de poenitentia. In nomine tuo, dulcis Jesu.].]
+#oradornota(nombre: "D. D. Eccius.")[D. D. Eccius#apnota("5")[M Die Zeitbestimmung von crastina an fehlt, Überschrift De poenitentia; U duodecima Julii argumentatus est Eccius respondente Martino de poenitentia. In nomine tuo, dulcis Jesu.].]
 
 Contra conclusionem reverendi patris et partem sermonis sui de poenitentia pro defensione optimorum patrum praedicantium intendo probare, poenitentiam veram incipere a timore etiam poenae, et quod bene quis se praeparet#apnota("9")[M se quis praeparet.] discutiendo, recogitando etc.
 
@@ -530,7 +530,7 @@ Quo vero iure aut qua ecclesiae felicitate hic modus divino iure praescriptus et
 Proinde, quod et damnatus fertur articulus#apnota("29")[M Proinde volo damnatos ostendere articulos.] in Constantiensi concilio de istis#apnota("30")[M his.] reservationibus, non satis curo. Hoc scio, quod probatus fuit et reprobata ista reservatio#apnota("31")[M reservatio huiusmodi.] in primitiva ecclesia et institutione apostolorum, et nunc quoque, ut miserrima ecclesiae experientia#apnota("32")[M experientia ecclesiae.] docet, esset utilissimus et saluberrimus ad coërcenda peccata et tollendam detestabilem confusionem omnium episcopatuum, quam hodie videmus. Qua causa autem sit suo tempore mutatus, transeo. Mutabilem invenio, mutabilem relinquo. Haec#apnota("35")[W. A. verbessert Mutabilem invenio. Relinquo haec.] in arbitrium iudicum#apnota("36")[U iudicum. Hora transit.].
 
 #refimp("380")
-#oradornota[D. D. Eccius#apnota("3")[U hat hier die Zeitangabe Quarta decima die Julii mane hora septima continuavit Eccius praeter pactum; vgl. Z. 8.].]
+#oradornota(nombre: "D. D. Eccius.")[D. D. Eccius#apnota("3")[U hat hier die Zeitangabe Quarta decima die Julii mane hora septima continuavit Eccius praeter pactum; vgl. Z. 8.].]
 
 Reverendus pater ab initio satis glorianter parvi pendit per me adducta, quasi sibi minime obstent, quae maxime adversantur. Nam ipse voluit in sermone vulgari, non fieri commutationem poenae aeternae in#apnota("6")[U in poenam; M aeternae mutatae in poenam.] temporalem, et opinioni communi contradicit, quasi non possit probari#apnota("7")[M mutari.], deum exigere aliquam satisfactionem, praeter portationem crucis. Et in sermone latino collaudat
 

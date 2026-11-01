@@ -6,18 +6,16 @@ ignora `build/` y `edicion/*.pdf`).
 
 ## Pasos
 
-1. Compilar los PDF con Typst en `build/` (el flujo aún no existe).
-2. En GitHub: **Releases → Draft a new release**.
-3. Tag nuevo (p. ej. `v0.1.0`), destino la rama `typst`.
-4. Título y notas; adjuntar los PDF.
-5. Marcar **Set as a pre-release** mientras no haya revisión humana.
-
-Con la CLI:
+1. `git push origin typst` (y el resto de ramas, si se quiere).
+2. `scripts/preparar-release.sh v0.1.0`: compila las cuatro ediciones y deja en
+   `build/release/` los PDF con nombre de descarga legible, `SHA256SUMS.txt` y `NOTAS.md`.
+3. Publicar (esto sí publica; no se hace sin confirmación):
 
 ```
 git tag v0.1.0 && git push origin v0.1.0
-gh release create v0.1.0 build/*.pdf --prerelease \
-  --title "v0.1.0 — borrador de IA" --notes-file NOTAS.md
+gh release create v0.1.0 build/release/*.pdf build/release/SHA256SUMS.txt \
+  --target typst --prerelease \
+  --title "v0.1.0 — borrador de IA" --notes-file build/release/NOTAS.md
 ```
 
 ## Decisiones

@@ -18,10 +18,10 @@ B = palabra nuestra ausente en OCR (posible añadido o fallo OCR). Ruido esperad
 - p.66: 17 → antiquiorem, commune, confusionem, debeat, decerno, dico, duodecim, excedant, exceluisse, hibitum, hierarchia, iudicio, opinor, ordines
 - p.207: 17 → antequam, benignus, carissime, confessoribus, deinde, descendant, dicit, domino, egisset, imponentes, imponis, literas, minicam, misericordiam
 - p.115: 16 → acceptare, asseruisse, chalcedonensis, gregorii, gregorium, inveniet, meorum, obtulit, praedecessorum, probavimus, proinde, randa, reiicisse, unquam
-- p.121: 16 → auspicatus, capitis, caput, certos, consessu, constituto, duos, hodie, indubitatos, laudat, leonem, primatus, retract, sententias
 - p.154: 16 → aqui, auctoritatem, ducatur, erit, hominis, ingenio, intelligit, lignum, loquitur, morien, nescio, ordi, praeparatum, purga
 - p.163: 16 → admittit, animam, distinctiones, distinguit, ecquis, exanime, habere, libenter, meritum, omni, purgatorium, quemadmodum, quid, quiescentibus
 - p.213: 16 → aequum, africa, concordiam, cucurrerant, episcopo, felieitate, gubernet, loquitur, oportet, peeea, praeseriptus, redditurus, solvendis, statutum
+- p.121: 15 → auspicatus, capitis, caput, certos, constituto, duos, hodie, indubitatos, laudat, leonem, primatus, retract, sententias, verbum
 - p.193: 13 → cooperetur, esai, luntatem, peccator, pedis, percussisti, percutiendo, planta, poeni, poeuitentiam, sanitas, verticera, visitabo
 - p.82: 12 → apud, consensu, disputatioue, emanavit, hunc, incipiendo, longa, populi, prae, reprobavit, romanam, unam
 - p.116: 12 → bono, desit, evangelicum, exemplo, exhortare, molliter, ponti, praecede, praedica, quid, sime, simpliciter

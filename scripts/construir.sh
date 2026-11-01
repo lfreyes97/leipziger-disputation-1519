@@ -2,6 +2,7 @@
 # Ensambla las páginas en lotes, regenera los fragmentos Typst y compila las cuatro
 # ediciones en build/. Requiere typst, @local/documentclass y @local/instatypst.
 # Fuentes IM FELL: FONTS=<carpeta> (por defecto ~/Projects/Instatypst/Fonts).
+# RESUMEN=si añade al final de cada edición el apéndice «Resumen de IA» (docs/RESUMEN-IA.md).
 set -e
 cd "$(dirname "$0")/../edicion"
 FONTS="${FONTS:-$HOME/Projects/Instatypst/Fonts}"
@@ -15,6 +16,7 @@ python3 ../scripts/ensamblar.py tradintro 1 11
 
 # 2. lotes -> fragmentos Typst
 python3 ../scripts/md2typ.py lotes/tradintro-pp001-011.md --titulo-inicial > fragmentos/intro.typ
+if [ "$RESUMEN" = si ]; then python3 ../scripts/md2prosa.py ../docs/RESUMEN-IA.md > fragmentos/resumen.typ; fi
 for n in 1 2 3; do
   lote=$(ls lotes/lote$n-pp*.md); trad=$(ls lotes/trad$n-pp*.md); rng=${lote#lotes/lote$n-}
   python3 ../scripts/md2typ.py "$lote" > fragmentos/lote$n.typ
@@ -25,5 +27,5 @@ done
 
 # 3. compilar
 for e in edicion-latina edicion-espanola lectura-latina lectura-espanola; do
-  typst compile --ignore-system-fonts --font-path "$FONTS" $e.typ ../build/$e.pdf
+  typst compile --ignore-system-fonts --font-path "$FONTS" --input resumen="${RESUMEN:-no}" $e.typ ../build/$e.pdf
 done

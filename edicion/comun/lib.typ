@@ -50,4 +50,10 @@
   include "../fragmentos/intro.typ"
   show: main
   cuerpo
+  // apéndice opcional (typst compile --input resumen=si …)
+  if sys.inputs.at("resumen", default: "no") == "si" {
+    [= Resumen de IA]
+    [#emph[Resumen elaborado con IA a partir de esta edición. No procede de Seitz y no ha sido verificado ni revisado por una persona.]]
+    include "../fragmentos/resumen.typ"
+  }
 }

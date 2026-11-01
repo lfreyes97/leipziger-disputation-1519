@@ -1,6 +1,6 @@
-# Borrador de estudio propio — El debate de Lutero con Eck (Leipzig, 1519)
+# Resumen de IA — El debate de Lutero con Eck (Leipzig, 1519)
 
-> Borrador escrito con IA, sin verificar. **No se incluye en las ediciones**: el estudio preliminar de las ediciones es la traducción del estudio introductorio de Seitz (`traduccion/trad-intro-pp-*.md`).
+> Resumen escrito con IA a partir de la edición, sin verificar. No forma parte de las ediciones salvo que se pida (`RESUMEN=si scripts/construir.sh`); entonces va al final, como apéndice. El estudio preliminar de las ediciones es la traducción del estudio de Seitz.
 
 Esta edición recoge solo el debate de Lutero con Eck (4–14 de julio de 1519), tal como lo edita Otto Seitz (1903, pp. 55–218). El resto de la Disputa de Leipzig, en particular el debate de Carlstadt con Eck, se menciona aquí únicamente como contexto.
 

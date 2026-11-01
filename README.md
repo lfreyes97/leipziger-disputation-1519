@@ -91,7 +91,9 @@ Abre un *issue* indicando:
 3. Lo que dice **este repositorio** y lo que dice **el facsímil**.
 4. Si es un error de transcripción (latín) o de traducción (español).
 
-Cada corrección aceptada se registra en `docs/`.
+Cada aportación se agradece y se responde; las correcciones aceptadas se
+registran en `docs/AGRADECIMIENTOS.md`. Para proponer un cambio por PR, ver
+`CONTRIBUTING.md`.
 
 ## Compilar
 

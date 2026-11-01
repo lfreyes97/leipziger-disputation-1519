@@ -25,7 +25,7 @@
   place(top + left, dx: i, dy: i, fl.filetes(W - 2 * i, H - 2 * i, tinta, tinta))
 
   place(top + left, dx: i, dy: i, block(width: W - 2 * i, height: H - 2 * i, inset: (x: 1cm, y: 0.6cm), align(center)[
-    #logo(width: 5.5cm, color: rojo)
+    #logo(width: 4.5cm, color: rojo)
     #v(0.3cm)
 
     #text(size: 46pt, fill: rojo)[LVTERO]

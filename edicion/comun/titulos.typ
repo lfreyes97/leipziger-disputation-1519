@@ -10,7 +10,7 @@
   show heading.where(level: 2): it => {
     salto-impar()
     v(2.5em)
-    block(below: 1.5em, align(center, text(font: "IM FELL English", size: 1.5em, weight: "regular", it.body)))
+    block(below: 1.5em, width: 100%, align(center, text(font: "IM FELL English", size: 1.5em, weight: "regular", it.body)))
   }
   show heading.where(level: 3): it => block(above: 2em, below: 1em, sticky: true, width: 100%,
     align(center, text(font: "IM FELL English", size: 1.3em, weight: "regular", it.body)))

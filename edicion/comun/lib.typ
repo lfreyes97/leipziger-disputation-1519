@@ -7,6 +7,8 @@
 #import "indice.typ": indice
 #import "cabeceras.typ": cabeceras
 #import "paginas.typ": en-blanco
+#import "contenido.typ": contenido
+#import "../contenido-entradas.typ": entradas
 
 #let con-portada = sys.inputs.at("portada", default: "si") != "no"
 #let repo = "https://github.com/lfreyes97/leipziger-disputation-1519/issues"
@@ -56,30 +58,31 @@
   }
   legales            // en el reverso de la portada; antes de `front`, que abre en página impar
   show: front
-  // contenido (se compone a partir de los encabezados; sin sus propias entradas)
+  // contenido hecho a mano y provisional (ver contenido.typ y contenido-entradas.typ)
   heading(outlined: false)[Contenido]
-  show outline.entry.where(level: 2): it => { v(0.9em, weak: true); it }
-  outline(title: none, depth: 3)
+  contenido(entradas)
+  v(1.5em)
+  text(size: 0.85em, style: "italic")[Las divisiones por materias son provisionales: proceden de un resumen elaborado con IA y no figuran como encabezados en el texto.]
   // sin portada ni legales (--input portada=no) la nota va suelta
   if not con-portada and nota != none { nota }
   // estudio preliminar: traducción del estudio introductorio de Seitz (pp. 1-11)
-  [= Estudio preliminar de Otto Seitz (1903)]
+  [= Estudio preliminar de Otto Seitz (1903) <cap-estudio>]
   [#emph[Traducción al español del estudio introductorio de Seitz (pp. 1--11). Elaborada con IA, sin revisión humana sistemática.]]
   include "../fragmentos/intro.typ"
   show: main
-  heading(numbering: none)[El debate de Lutero con Eck (4--14 de julio de 1519)]
+  [#heading(numbering: none)[El debate de Lutero con Eck (4--14 de julio de 1519)] <cap-texto>]
   cuerpo
   [#metadata(none) <fin-texto>]
   // índices (typst compile --input indice=si …): por ahora, personas
   if sys.inputs.at("indice", default: "no") == "si" {
     show: back
-    heading(numbering: none)[Índice de personas]
+    [#heading(numbering: none)[Índice de personas] <cap-indice>]
     [#emph[Prototipo sin curar: marca automáticamente las formas de nombres de una tabla (`edicion/indice-entradas.json`); las cifras son páginas del impreso de Seitz.]]
     indice("personas")
   }
   // apéndice opcional (typst compile --input resumen=si …)
   if sys.inputs.at("resumen", default: "no") == "si" {
-    [= Resumen de IA]
+    [= Resumen de IA <cap-resumen>]
     [#emph[Resumen elaborado con IA a partir de esta edición. No procede de Seitz y no ha sido verificado ni revisado por una persona.]]
     include "../fragmentos/resumen.typ"
   }

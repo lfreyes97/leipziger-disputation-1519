@@ -24,7 +24,7 @@
   #if pagina != none [#pag(pagina)]#cuerpo]
 // Aspecto de la etiqueta de orador (lo usa también `titulos.typ`).
 #let estilo-orador(cuerpo) = block(above: 1.4em, below: 0.6em, sticky: true, width: 100%,
-  align(center, text(style: "italic", size: 1.12em, cuerpo)))
+  align(center, text(font: ("EB Garamond SC 12", "Libertinus Serif"), size: 1.2em, tracking: 0.03em, cuerpo)))
 // Misma etiqueta, sin ser encabezado: para las que llevan llamada de nota (el
 // texto de la nota acabaría en el contorno del PDF).
 #let oradornota(cuerpo, pagina: none) = estilo-orador[#if pagina != none [#pag(pagina)]#cuerpo]

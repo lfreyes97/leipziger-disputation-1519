@@ -2,7 +2,7 @@
 // que no distingue las intervenciones de los oradores ni deja un contorno útil.
 // Siempre centrados y algo mayores que el cuerpo:
 //   nivel 2: capítulo (1.5em)   nivel 3: sección, p. ej. «II.» (1.3em)
-//   nivel 4: intervención de un orador (1.12em, cursiva; ver aparato.typ)
+//   nivel 4: intervención de un orador (1.2em, versalitas de EB Garamond; ver aparato.typ)
 #import "aparato.typ": estilo-orador
 
 #let titulos(cuerpo) = {

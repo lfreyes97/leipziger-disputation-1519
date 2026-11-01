@@ -18,6 +18,12 @@ espacio para añadirlo más adelante.
 > no se han encontrado. No cites este texto como edición crítica sin
 > comprobar el pasaje en Seitz. Si encuentras un error, abre un *issue*.
 
+## Descargas
+
+Los PDF listos (edición crítica y edición de lectura, en español) se publican en
+la página de [Releases](https://github.com/lfreyes97/leipziger-disputation-1519/releases).
+Cada versión lleva sus notas y las sumas de verificación.
+
 ## Estado
 
 | Parte | Estado |
@@ -103,25 +109,50 @@ registran en `docs/AGRADECIMIENTOS.md`. Para proponer un cambio por PR, ver
 
 ## Compilar
 
-Requiere Python 3 y Typst 0.15, más los paquetes locales `documentclass` y
-`instatypst` (portada, legales y ornamentos; instalados como `@local`) y las
-fuentes IM FELL y EB Garamond 12 (Libertinus Serif como respaldo). Desde la raíz del repositorio:
+> **Los scripts de construcción son de shell (`construir.sh`, `preparar-release.sh`)
+> y no funcionan en Windows.** Solo se han probado en Linux. En Windows se pueden
+> usar desde WSL, o encadenar a mano los pasos que hace `construir.sh` (los
+> conversores en Python, `scripts/*.py`, son multiplataforma, y `typst compile`
+> también).
+
+**Requisitos**
+
+- Python 3 y [Typst](https://typst.app) 0.15.
+- Dos paquetes de Typst propios, instalados como paquetes locales (`@local`):
+  [`documentclass`](https://github.com/lfreyes97/documentclass) (clase `book`) e
+  [`instatypst`](https://github.com/lfreyes97/Instatypst) (ornamentos de la portada
+  y los legales):
+
+  ```sh
+  git clone https://github.com/lfreyes97/documentclass \
+    ~/.local/share/typst/packages/local/documentclass/0.1.0
+  git clone https://github.com/lfreyes97/Instatypst \
+    ~/.local/share/typst/packages/local/instatypst/0.1.0
+  ```
+
+  (En macOS la carpeta es `~/Library/Application Support/typst/packages/local`.)
+- Las fuentes IM FELL y EB Garamond 12 (con Libertinus Serif como respaldo). Están
+  en la carpeta `Fonts/` del repositorio de instatypst; si lo clonaste como arriba,
+  `FONTS=~/.local/share/typst/packages/local/instatypst/0.1.0/Fonts`.
+
+**Construir**, desde la raíz del repositorio:
 
 ```sh
-FONTS=/ruta/a/Fonts scripts/construir.sh
+FONTS=~/.local/share/typst/packages/local/instatypst/0.1.0/Fonts scripts/construir.sh
 ```
 
-El script ensambla las páginas en lotes, regenera los fragmentos Typst desde el Markdown (`md2typ.py`,
-`md2lectura.py`) y compila en `build/` las cuatro ediciones:
-`edicion-latina`, `edicion-espanola`, `lectura-latina` y `lectura-espanola`.
-Los archivos de `edicion/lotes/` y `edicion/fragmentos/` son derivados y no se
-editan a mano; la fuente canónica es el Markdown de `transcripcion/` y
-`traduccion/`.
+El script ensambla las páginas en lotes, regenera los fragmentos Typst desde el
+Markdown (`md2typ.py`, `md2lectura.py`) y compila en `build/` las cuatro
+ediciones: `edicion-latina`, `edicion-espanola`, `lectura-latina` y
+`lectura-espanola`. Los archivos de `edicion/lotes/` y `edicion/fragmentos/` son
+derivados y no se editan a mano; la fuente canónica es el Markdown de
+`transcripcion/` y `traduccion/`.
 
 Opciones de `construir.sh`, por variable de entorno:
 `INDICE=si` añade un índice de personas al final (prototipo: marca automáticamente
 los nombres de `edicion/indice-entradas.json` y da páginas del impreso de Seitz),
-`RESUMEN=si` añade el resumen de IA, y `construir.sh resumen` compila solo este.
+`RESUMEN=si` añade el resumen de IA, `construir.sh resumen` compila solo este y
+`construir.sh espanol` compila solo las dos ediciones en español.
 Las ediciones llevan además la paginación de Seitz en el margen.
 
 Para compilar una sola edición:

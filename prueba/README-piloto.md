@@ -4,6 +4,6 @@ Prueba metodológica previa a la producción: define convenciones, empalmes y
 plantillas con el inicio del debate (PDF 63–72).
 
 - `luther-eck-test-10pp.pdf`: recorte de 10 pp. del facsímil.
-- `plantilla-maestra.tex/.typ` (+ PDFs): maestras del piloto en XeLaTeX y Typst.
+- `plantilla-maestra.tex` (+ PDF): maestra del piloto en XeLaTeX.
 - Los fragmentos del piloto viven en `transcripcion/test-p0*.md` (entran en
   los lotes 55–64 con claves prefijadas `t01–t05`).

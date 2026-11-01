@@ -5,10 +5,10 @@
 
 #show: edicion.with(
   "Disputa de Leipzig (1519)",
-  [II. Lutero--Eck · Edición de lectura · texto latino],
+  [Debate de Lutero con Eck (4--14 de julio) · Edición de lectura · texto latino],
   lang: "la",
   nota: [
-    Texto para lectura seguida: se suprime el aparato crítico y las llamadas;
+    Alcance: solo el debate de Lutero con Eck; el resto de la Disputa de Leipzig no está incluido. Texto para lectura seguida: se suprime el aparato crítico y las llamadas;
     los oradores van como encabezados y las referencias de actas \[NNN\] en
     gris, en línea. Para el texto crítico, véase la edición latina.
   ],

@@ -3,11 +3,11 @@
 #import "comun/lib.typ": *
 
 #show: edicion.with(
-  "Der authentische Text der Leipziger Disputation",
-  [II. Disputatio Luther--Eck (4--14 de julio de 1519)],
+  "Disputa de Leipzig (1519)",
+  [Debate de Lutero con Eck (4--14 de julio) · Texto latino con aparato crítico],
   lang: "la",
   nota: [
-    Transcripción diplomática de Seitz, impresas 55--218, página por página y
+    Alcance: solo el debate de Lutero con Eck; el resto de la Disputa de Leipzig no está incluido. Transcripción diplomática de Seitz, impresas 55--218, página por página y
     con el aparato crítico íntegro (siglas M U Uv Mc Lö P R.); u/v, i/j y
     puntuación originales; \[...\] = ilegible; \[NNN\] = referencias del
     impreso. Las notas llevan la etiqueta del impreso. Anomalías documentadas

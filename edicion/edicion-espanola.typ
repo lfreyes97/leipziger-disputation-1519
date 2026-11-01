@@ -3,11 +3,11 @@
 #import "comun/lib.typ": *
 
 #show: edicion.with(
-  "El texto auténtico de la Disputa de Leipzig",
-  [II. Disputa Lutero--Eck (4--14 de julio de 1519)],
+  "Disputa de Leipzig (1519)",
+  [Debate de Lutero con Eck (4--14 de julio) · Traducción española con aparato crítico],
   lang: "es",
   nota: [
-    Traducción al español de Seitz, impresas 55--218, cuerpo a cuerpo con la
+    Alcance: solo el debate de Lutero con Eck; el resto de la Disputa de Leipzig no está incluido. Traducción al español de Seitz, impresas 55--218, cuerpo a cuerpo con la
     transcripción latina. El aparato crítico se conserva en su lengua original
     (latín y alemán; siglas M U Uv Mc Lö P R.). Las notas llevan la etiqueta
     del impreso. Anomalías documentadas en #raw("docs/RESOLUCIONES.md").

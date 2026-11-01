@@ -23,8 +23,8 @@
     Antes de citar un pasaje, compruébese en el facsímil de Seitz. #if url != "" [
       Las erratas se reportan en #text(size: 8pt)[#url].]
 
-    #sc[Dominio público.] El texto latino de la Disputa de Leipzig (1519) es
-    de dominio público. La transcripción y la traducción se dedican asimismo
+    #sc[Dominio público.] El texto latino del debate de Lutero con Eck (Disputa
+    de Leipzig, 1519) es de dominio público. La transcripción y la traducción se dedican asimismo
     al dominio público mediante #emph[Creative Commons CC0 1.0 Universal]:
     pueden copiarse, modificarse, distribuirse y publicarse, incluso con
     fines comerciales, sin pedir permiso. \

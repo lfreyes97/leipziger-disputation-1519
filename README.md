@@ -1,8 +1,14 @@
 # Disputa de Leipzig (1519) — Lutero contra Eck
 
-Transcripción latina, traducción al español y ediciones de la Disputa de
-Leipzig (4–14 de julio de 1519) a partir de Otto Seitz, *Der authentische
-Text der Leipziger Disputation* (Berlín, 1903), pp. 55–218.
+Transcripción latina, traducción al español y ediciones del debate de Lutero
+con Eck (4–14 de julio de 1519), parte de la Disputa de Leipzig, a partir de
+Otto Seitz, *Der authentische Text der Leipziger Disputation* (Berlín, 1903),
+pp. 55–218.
+
+**Alcance.** Por ahora el repositorio contiene solo el debate de Lutero con
+Eck. El resto de la Disputa de Leipzig (en particular el debate de Karlstadt
+con Eck) no está transcrito ni traducido. El nombre del repositorio deja
+espacio para añadirlo más adelante.
 
 > **Aviso: este texto lo hizo una IA y no ha tenido revisión humana
 > sistemática.**

@@ -2,7 +2,7 @@
 
 ## 1. Colación y corrección
 - Cruce automático transcripción ↔ OCR ABBYY (`derauthentischet00eckj_djvu.xml`, palabra por página) → ranking de páginas sospechosas.
-- Segunda pasada humana (subagentes) solo sobre páginas divergentes + erratas ya listadas en reportes.
+- Segunda pasada con IA (subagentes; la revisión humana sigue pendiente) solo sobre páginas divergentes + erratas ya listadas en reportes.
 - Criterio: diplomática (se conserva la errata con `(so!)` o aviso; no se enmienda en silencio).
 
 ## 2. Aparato y anomalías → `docs/RESOLUCIONES.md`

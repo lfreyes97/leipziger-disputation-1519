@@ -42,9 +42,8 @@ Las dos comparten las mismas fuentes en Markdown (`transcripcion/`,
 | `edicion/` | Lotes ensamblados desde las páginas (`lote*`, `trad*`, `lec*`, `lectrad*`) |
 | `fuentes/seitz1903/` | Facsímil y OCR de Seitz 1903 (Internet Archive, `derauthentischet00eckj`) |
 | `fuentes/hase1827/` | Facsímil y OCR de Hase 1827 (Biblioteca Estatal de Baviera) |
-| `prueba/` | Piloto de 10 páginas con plantilla maestra |
 | `scripts/` | Ensamblado, colación contra OCR, índices y conversores |
-| `docs/` | Método: convenciones, prompts, plan editorial, resoluciones de anomalías, informe de colación |
+| `docs/` | Método: convenciones, prompts, plan editorial, resoluciones de anomalías, informe de colación y descripción del piloto (`PILOTO.md`) |
 
 Para citar un pasaje, usa la página impresa de Seitz. El PDF del facsímil
 tiene 8 páginas más (PDF = impresa + 8).

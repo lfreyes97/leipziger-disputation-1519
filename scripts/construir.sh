@@ -2,7 +2,8 @@
 # Ensambla las páginas en lotes, regenera los fragmentos Typst y compila las cuatro
 # ediciones en build/. Requiere typst, @local/documentclass y @local/instatypst.
 # Fuentes IM FELL: FONTS=<carpeta> (por defecto ~/Projects/Instatypst/Fonts).
-# «construir.sh resumen» compila solo el documento suelto «Resumen de IA».
+# «construir.sh espanol» compila solo las ediciones en español; «construir.sh resumen»,
+# solo el documento suelto «Resumen de IA».
 # INDICE=si añade al final el índice de personas (prototipo).
 # RESUMEN=si añade al final de cada edición el apéndice «Resumen de IA» (docs/RESUMEN-IA.md).
 set -e
@@ -36,6 +37,9 @@ for n in 1 2 3; do
 done
 
 # 3. compilar
-for e in edicion-latina edicion-espanola lectura-latina lectura-espanola; do
+# «construir.sh espanol» compila solo las dos ediciones en español (las que se publican)
+EDICIONES="edicion-latina edicion-espanola lectura-latina lectura-espanola"
+[ "$1" = espanol ] && EDICIONES="edicion-espanola lectura-espanola"
+for e in $EDICIONES; do
   typst compile --ignore-system-fonts --font-path "$FONTS" --input resumen="${RESUMEN:-no}" --input indice="${INDICE:-no}" $e.typ ../build/$e.pdf
 done

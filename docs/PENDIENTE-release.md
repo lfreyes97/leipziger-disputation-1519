@@ -7,7 +7,7 @@ ignora `build/` y `edicion/*.pdf`).
 ## Pasos
 
 1. `git push origin typst` (y el resto de ramas, si se quiere).
-2. `scripts/preparar-release.sh v0.1.0`: compila las cuatro ediciones y deja en
+2. `scripts/preparar-release.sh v0.1.0`: compila las dos ediciones en español y deja en
    `build/release/` los PDF con nombre de descarga legible, `SHA256SUMS.txt` y `NOTAS.md`.
 3. Publicar (esto sí publica; no se hace sin confirmación):
 

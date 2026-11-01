@@ -28,7 +28,7 @@ espacio para añadirlo más adelante.
 | Estudio preliminar de Seitz (impresas 1–11) | Transcrito en alemán y traducido al español con IA (`traduccion/trad-intro-pp-*.md`); va al comienzo de las cuatro ediciones; sin revisión humana sistemática |
 | Resumen de IA (`docs/RESUMEN-IA.md`) | Escrito con IA, sin verificar; **no** va en las ediciones salvo que se pida (`RESUMEN=si scripts/construir.sh`): entonces se añade al final como apéndice |
 | Índices (`docs/INDICES-borrador.md`) | Borrador automático, sin curar |
-| Ediciones en PDF | Cuatro, compiladas con Typst desde `scripts/construir.sh` (crítica y lectura, latina y española); se publican como *release*, no en el repo |
+| Ediciones en PDF | Cuatro, compiladas con Typst desde `scripts/construir.sh` (crítica y lectura, latina y española). Se publican solo las dos españolas, como *release*, no en el repo |
 | Hase 1827 (`fuentes/hase1827/`) | Solo el facsímil; sin transcribir |
 
 ## Ramas

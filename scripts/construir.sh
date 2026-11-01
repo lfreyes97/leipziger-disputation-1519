@@ -2,11 +2,19 @@
 # Ensambla las páginas en lotes, regenera los fragmentos Typst y compila las cuatro
 # ediciones en build/. Requiere typst, @local/documentclass y @local/instatypst.
 # Fuentes IM FELL: FONTS=<carpeta> (por defecto ~/Projects/Instatypst/Fonts).
+# «construir.sh resumen» compila solo el documento suelto «Resumen de IA».
 # RESUMEN=si añade al final de cada edición el apéndice «Resumen de IA» (docs/RESUMEN-IA.md).
 set -e
 cd "$(dirname "$0")/../edicion"
 FONTS="${FONTS:-$HOME/Projects/Instatypst/Fonts}"
 mkdir -p ../build
+
+# «construir.sh resumen»: solo el documento suelto «Resumen de IA»
+if [ "$1" = resumen ]; then
+  python3 ../scripts/md2prosa.py ../docs/RESUMEN-IA.md > fragmentos/resumen.typ
+  typst compile --ignore-system-fonts --font-path "$FONTS" resumen-ia.typ ../build/resumen-ia.pdf
+  exit 0
+fi
 
 # 1. páginas -> lotes
 python3 ../scripts/ensamblar.py lote1 55 109;  python3 ../scripts/ensamblar.py trad1 55 109

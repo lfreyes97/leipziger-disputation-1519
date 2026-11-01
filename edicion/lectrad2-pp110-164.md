@@ -710,7 +710,9 @@ Cese, pues, ruego, de gloriarse de estar apoyado en mayores autoridades contra t
 
 
 
-[322] El D. D. Martín.
+> [322]
+
+### El D. D. Martín.
 
 
 

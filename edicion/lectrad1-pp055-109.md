@@ -18,7 +18,9 @@ Lamento también que no estén presentes aquellos a quienes más convenía; ello
 
 
 
-[255] El señor doctor Eck.
+> [255]
+
+### El señor doctor Eck.
 
 
 
@@ -342,7 +344,9 @@ Por último, a partir de Ricardo de Armagh interpretó la palabra de Cristo sobr
 
 
 
-[273] El doctor D. Eck.
+> [273]
+
+### El doctor D. Eck.
 
 
 

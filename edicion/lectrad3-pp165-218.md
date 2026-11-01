@@ -1066,7 +1066,9 @@ Por tanto, que también se diga condenado el artículo en el concilio Constancie
 
 
 
-[380] El D. D. Eck.
+> [380]
+
+### El D. D. Eck.
 
 
 

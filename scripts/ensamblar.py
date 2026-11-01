@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 TRANSDIR = ROOT / 'transcripcion'
 TRADDIR = ROOT / 'traduccion'
-EDIDIR = ROOT / 'edicion'
+EDIDIR = ROOT / 'edicion' / 'lotes'
 
 def load(p):
     return p.read_text(encoding='utf-8').strip() + '\n'

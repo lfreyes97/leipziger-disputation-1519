@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 from collections import defaultdict
 
-EDIDIR = Path(__file__).parent.parent / 'edicion'
+EDIDIR = Path(__file__).parent.parent / 'edicion' / 'lotes'
 DOCS = Path(__file__).parent.parent / 'docs'
 lotes = [EDIDIR / f'lote{i}-pp*.md'.replace('*', a) for i, a in
          [(1, '055-109'), (2, '110-164'), (3, '165-218')]]

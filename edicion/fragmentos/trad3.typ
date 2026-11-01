@@ -1,4 +1,4 @@
-#import "aparato.typ": apnota
+#import "../comun/aparato.typ": apnota
 
 En cuanto a lo otro, sobre el canon de los libros, donde, apoyado en la autoridad de Jerónimo y del concilio de Florencia#apnota("19")[fehlt in M.], prefiere creer al concilio, que es regido por el Espíritu Santo, antes que a mí, y#apnota("20")[W. A setzt dafür ei.] le doy las gracias. Pues sabe piadosamente, nunca quise que se me creyera. Pero respondo brevemente: concilie él primero#apnota("21a")[U primum.] a Jerónimo consigo, quien#apnota("21b")[M quia.] en el prólogo galeato#apnota("22a")[P Uv allegato.] enumera expresamente los libros de los Macabeos y algunos otros entre los apócrifos#apnota("22b")[M apographa.], por cuya autoridad resulta que el libro de los Macabeos me es grato y aprobado, pero queda abierto a los contenciosos para#apnota("24")[M pati ad. Mc schreibt über 'fateor'.] el rechazo. Bastante he dicho hoy sobre el concilio, más aún, como dice el propio D. D.: el concilio no yerra, pero si yerra, no es concilio, y para hablar según mi sentir, creo que el concilio y la Iglesia nunca yerran en lo que es de fe, en lo demás no es necesario que no yerren.
 

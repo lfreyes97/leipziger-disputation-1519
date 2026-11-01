@@ -1,7 +1,7 @@
 // Edición de LECTURA española — Disputa Lutero-Eck (Seitz 1903, impresas 55-218)
 // Sin aparato crítico (véanse edicion-latina.typ y edicion-espanola.typ).
 // Compilar: typst compile --ignore-system-fonts --font-path ~/Projects/Instatypst/Fonts lectura-espanola.typ
-#import "lib.typ": *
+#import "comun/lib.typ": *
 
 #show: edicion.with(
   "Disputa de Leipzig (1519)",
@@ -15,6 +15,6 @@
   ],
 )
 
-#include "lectrad1.typ"
-#include "lectrad2.typ"
-#include "lectrad3.typ"
+#include "fragmentos/lectrad1.typ"
+#include "fragmentos/lectrad2.typ"
+#include "fragmentos/lectrad3.typ"

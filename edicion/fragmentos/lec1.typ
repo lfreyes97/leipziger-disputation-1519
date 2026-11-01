@@ -1,4 +1,4 @@
-#import "aparato.typ": orador, refimp
+#import "../comun/aparato.typ": orador, refimp
 
 #align(center, text(1.4em)[II.])
 

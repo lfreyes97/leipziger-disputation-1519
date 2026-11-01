@@ -8,11 +8,11 @@ FONTS="${FONTS:-$HOME/Projects/Instatypst/Fonts}"
 mkdir -p ../build
 
 for n in 1 2 3; do
-  lote=$(ls lote$n-pp*.md); trad=$(ls trad$n-pp*.md); rng=${lote#lote$n-}
-  python3 ../scripts/md2typ.py "$lote" > lote$n.typ
-  python3 ../scripts/md2typ.py "$trad" > trad$n.typ
-  python3 ../scripts/md2lectura.py "$lote" --typ lec$n.typ --md lec$n-$rng
-  python3 ../scripts/md2lectura.py "$trad" --typ lectrad$n.typ --md lectrad$n-$rng
+  lote=$(ls lotes/lote$n-pp*.md); trad=$(ls lotes/trad$n-pp*.md); rng=${lote#lotes/lote$n-}
+  python3 ../scripts/md2typ.py "$lote" > fragmentos/lote$n.typ
+  python3 ../scripts/md2typ.py "$trad" > fragmentos/trad$n.typ
+  python3 ../scripts/md2lectura.py "$lote" --typ fragmentos/lec$n.typ --md lotes/lec$n-$rng
+  python3 ../scripts/md2lectura.py "$trad" --typ fragmentos/lectrad$n.typ --md lotes/lectrad$n-$rng
 done
 
 for e in edicion-latina edicion-espanola lectura-latina lectura-espanola; do

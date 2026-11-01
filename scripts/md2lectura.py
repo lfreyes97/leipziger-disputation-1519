@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Edición de LECTURA desde un lote MD: sin aparato, oradores como encabezados,
 refs [NNN] en gris (Typst) o en línea (MD).
-Uso: python3 md2lectura.py edicion/lote1-pp055-109.md --typ edicion/lec1.typ --md edicion/lec1-pp055-109.md
+Uso: python3 md2lectura.py edicion/lotes/lote1-pp055-109.md --typ edicion/fragmentos/lec1.typ --md edicion/lotes/lec1-pp055-109.md
 """
 import re, sys, argparse
 
@@ -52,7 +52,7 @@ for l in lines:
     mout.append(re.sub(r'\s+', ' ', s))
 
 open(a.typ, 'w', encoding='utf-8').write(
-    '#import "aparato.typ": orador, refimp\n\n' + '\n'.join(tout) + '\n')
+    '#import "../comun/aparato.typ": orador, refimp\n\n' + '\n'.join(tout) + '\n')
 open(a.md, 'w', encoding='utf-8').write('\n\n'.join(m for m in mout if m is not None) + '\n')
 n = sum(1 for l in tout if l.startswith('#orador'))
 print(a.src, '→ oradores:', n)

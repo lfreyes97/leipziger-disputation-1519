@@ -1,4 +1,4 @@
-#import "aparato.typ": orador, refimp
+#import "../comun/aparato.typ": orador, refimp
 
 Ad aliud, de canone librorum, ubi nixus Hieronymi et concilii Florentini auctoritate mavult credere concilio, quod a spiritu sancto regitur, quam mihi, et gratias ago. Pie enim sapit, nunquam volui mihi credi. Sed respondeo breviter: Conciliet ipse primo Hieronymum sibi, qui in prologo galeato Machabaeorum libros et nonnullos alios manifeste inter apocrypha recenset, qua auctoritate fit, ut mihi liber Machabaeorum sit gratus et probatus, sed contentiosis pateat ad repulsam. Satis hodie de concilio dixi, imo, ut ipsemet D. D. dicit: Concilium non errat, si autem errat, non est concilium, et ut meo sensu loquar, credo concilium et ecclesiam nunquam errare in his, quae sunt fidei, in ceteris non est necesse non errare.
 

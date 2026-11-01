@@ -39,7 +39,7 @@ Las dos comparten las mismas fuentes en Markdown (`transcripcion/`,
 |---|---|
 | `transcripcion/` | Latín, una página impresa por archivo (`pp-065.md` … `pp-218.md`), la introducción de Seitz (`intro-pp-*.md`) y el piloto (`test-p0*.md`) |
 | `traduccion/` | Español, con la misma segmentación y el mismo aparato (`trad-pp-*.md`) |
-| `edicion/` | Lotes ensamblados desde las páginas (`lote*`, `trad*`, `lec*`, `lectrad*`) |
+| `edicion/` | Composición en Typst: las cuatro maestras, `comun/` (clase, aparato, portada, legales), `lotes/` (Markdown ensamblado) y `fragmentos/` (Typst generado) |
 | `fuentes/seitz1903/` | Facsímil y OCR de Seitz 1903 (Internet Archive, `derauthentischet00eckj`) |
 | `fuentes/hase1827/` | Facsímil y OCR de Hase 1827 (Biblioteca Estatal de Baviera) |
 | `scripts/` | Ensamblado, colación contra OCR, índices y conversores |
@@ -106,10 +106,12 @@ FONTS=/ruta/a/Fonts scripts/construir.sh
 El script regenera los fragmentos Typst desde el Markdown (`md2typ.py`,
 `md2lectura.py`) y compila en `build/` las cuatro ediciones:
 `edicion-latina`, `edicion-espanola`, `lectura-latina` y `lectura-espanola`.
-Los `.typ` de `edicion/` generados desde el Markdown (`lote*`, `trad*`, `lec*`,
-`lectrad*`) no se editan a mano; la fuente canónica es el Markdown.
+Los archivos de `edicion/lotes/` y `edicion/fragmentos/` son derivados y no se
+editan a mano; la fuente canónica es el Markdown de `transcripcion/` y
+`traduccion/`.
 
-Para otro paso, cada edición se compila por separado:
+Para compilar una sola edición,
+cada una se compila por separado:
 
 ```sh
 cd edicion

@@ -1,4 +1,4 @@
-#import "aparato.typ": orador, refimp
+#import "../comun/aparato.typ": orador, refimp
 
 En cuanto a lo otro, sobre el canon de los libros, donde, apoyado en la autoridad de Jerónimo y del concilio de Florencia, prefiere creer al concilio, que es regido por el Espíritu Santo, antes que a mí, y le doy las gracias. Pues sabe piadosamente, nunca quise que se me creyera. Pero respondo brevemente: concilie él primero a Jerónimo consigo, quien en el prólogo galeato enumera expresamente los libros de los Macabeos y algunos otros entre los apócrifos, por cuya autoridad resulta que el libro de los Macabeos me es grato y aprobado, pero queda abierto a los contenciosos para el rechazo. Bastante he dicho hoy sobre el concilio, más aún, como dice el propio D. D.: el concilio no yerra, pero si yerra, no es concilio, y para hablar según mi sentir, creo que el concilio y la Iglesia nunca yerran en lo que es de fe, en lo demás no es necesario que no yerren.
 

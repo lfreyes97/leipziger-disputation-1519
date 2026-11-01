@@ -1,4 +1,4 @@
-#import "aparato.typ": orador, refimp
+#import "../comun/aparato.typ": orador, refimp
 
 concilio, y que así puede pecar o errar; pues aunque como hombres sean falibles, ha de creerse que el verdadero concilio legítimamente reunido no se rige por sentido humano, sino por espíritu divino, de donde están suficientemente probadas las cosas que el concilio aprueba, y no han de ser discutidas ulteriormente por la singularidad y testarudez de cualquiera, sino que debemos cautivar el entendimiento en obediencia de la fe. Por lo cual me maravillo de que, estando por negar el texto de los derechos, admita como comentarista al Panormitano.
 

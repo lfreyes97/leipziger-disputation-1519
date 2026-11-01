@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Convierte un lote MD (cuerpo + definiciones) a fragmento .typ sin preámbulo
-(solo importa `apnota` de aparato.typ, que está junto al fragmento).
-Uso: python3 md2typ.py edicion/lote1-pp055-109.md > edicion/lote1.typ
-- [^key] -> #apnota("etiqueta")[definición]  (#apnota se define en edicion/aparato.typ)
+(solo importa `apnota` de edicion/comun/aparato.typ).
+Uso: python3 md2typ.py edicion/lotes/lote1-pp055-109.md > edicion/fragmentos/lote1.typ
+- [^key] -> #apnota("etiqueta")[definición]  (#apnota se define en edicion/comun/aparato.typ)
 - La etiqueta es la del impreso: la clave sin el prefijo de página/fragmento y
   sin los sufijos de desambiguación (065-14-2 -> 14; t03-21b2 -> 21b).
 - Las definiciones consumidas desaparecen del flujo; las sin llamada van a un
@@ -78,7 +78,7 @@ def convertir(src):
     if sin_llamada:
         texto += ('\n\n#emph[Notas del aparato sin llamada en el cuerpo:] '
                   + '; '.join('\\[%s\\] %s' % (esc(etiqueta(k)), esc(v)) for k, v in sin_llamada) + '\n')
-    return '#import "aparato.typ": apnota\n\n' + texto
+    return '#import "../comun/aparato.typ": apnota\n\n' + texto
 
 
 if __name__ == '__main__':

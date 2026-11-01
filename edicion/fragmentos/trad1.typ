@@ -1,4 +1,4 @@
-#import "aparato.typ": apnota
+#import "../comun/aparato.typ": apnota
 
 II.
 

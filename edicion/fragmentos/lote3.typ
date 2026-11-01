@@ -1,4 +1,4 @@
-#import "aparato.typ": apnota
+#import "../comun/aparato.typ": apnota
 
 Ad aliud, de canone librorum, ubi nixus Hieronymi et concilii Florentini#apnota("19")[fehlt in M.] auctoritate mavult credere concilio, quod a spiritu sancto regitur, quam mihi, et#apnota("20")[W. A setzt dafür ei.] gratias ago. Pie enim sapit, nunquam volui mihi credi. Sed respondeo breviter: Conciliet ipse primo#apnota("21a")[U primum.] Hieronymum sibi, qui#apnota("21b")[M quia.] in prologo galeato#apnota("22a")[P Uv allegato.] Machabaeorum libros et nonnullos alios manifeste inter apocrypha#apnota("22b")[M apographa.] recenset, qua auctoritate fit, ut mihi liber Machabaeorum sit gratus et probatus, sed contentiosis pateat ad#apnota("24")[M pati ad. Mc schreibt über 'fateor'.] repulsam. Satis hodie de concilio dixi, imo, ut ipsemet D. D. dicit: Concilium non errat, si autem errat, non est concilium, et ut meo sensu loquar, credo concilium et ecclesiam nunquam errare in his, quae sunt fidei, in ceteris non est necesse non errare.
 

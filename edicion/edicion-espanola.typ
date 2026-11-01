@@ -1,6 +1,6 @@
 // Edición española (crítica, con aparato) — Seitz 1903, II. Disputatio Luther-Eck (impresas 55-218)
 // Compilar: typst compile --ignore-system-fonts --font-path ~/Projects/Instatypst/Fonts edicion-espanola.typ
-#import "lib.typ": *
+#import "comun/lib.typ": *
 
 #show: edicion.with(
   "El texto auténtico de la Disputa de Leipzig",
@@ -14,6 +14,6 @@
   ],
 )
 
-#include "trad1.typ"
-#include "trad2.typ"
-#include "trad3.typ"
+#include "fragmentos/trad1.typ"
+#include "fragmentos/trad2.typ"
+#include "fragmentos/trad3.typ"

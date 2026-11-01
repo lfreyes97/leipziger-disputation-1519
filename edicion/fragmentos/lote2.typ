@@ -1,4 +1,4 @@
-#import "aparato.typ": apnota
+#import "../comun/aparato.typ": apnota
 
 concilio, et ita peccare vel errare posse#apnota("9c")[M et ita peccare (Mc add errare) posse, U et ita errare possunt, Uv = P.]; nam etsi ut homines defectibiles sint, verum concilium legitime congregatum#apnota("10")[M in concilio legitime congregato, U in consilium legitime congregatum.] non humano sensu, sed spiritu divino regi credendum est, unde#apnota("11")[regi credendum est fehlt in U; U ut (statt unde); Uv = P.] sat probata#apnota("12a")[M probata sunt, U probata sint (Uv ? = M).], quae concilium probat#apnota("12b")[U probavit.], et non sunt#apnota("12c")[fehlt in U] per cuiuslibet#apnota("12d")[M U cuiusque.] singularitatem et capitositatem#apnota("13")[M singularitate et capitositate, Mc a. R. capciositate, U singularitatem vel capitositatem.] ulterius discutienda, sed captivare debemus intellectum in obsequium fidei. Quare miror#apnota("14a")[M minor, Mc miror.], quod textum negaturus iurium#apnota("14b")[U Siculam (statt iurium), Uv trägt iurium nach.] commentatorem admittit#apnota("15")[M admittit.] Panormitanum.
 

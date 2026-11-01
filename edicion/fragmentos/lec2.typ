@@ -1,4 +1,4 @@
-#import "aparato.typ": orador, refimp
+#import "../comun/aparato.typ": orador, refimp
 
 concilio, et ita peccare vel errare posse; nam etsi ut homines defectibiles sint, verum concilium legitime congregatum non humano sensu, sed spiritu divino regi credendum est, unde sat probata, quae concilium probat, et non sunt per cuiuslibet singularitatem et capitositatem ulterius discutienda, sed captivare debemus intellectum in obsequium fidei. Quare miror, quod textum negaturus iurium commentatorem admittit Panormitanum.
 

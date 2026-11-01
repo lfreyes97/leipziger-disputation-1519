@@ -1,6 +1,6 @@
 // Edición latina (crítica, con aparato) — Seitz 1903, II. Disputatio Luther-Eck (impresas 55-218)
 // Compilar: typst compile --ignore-system-fonts --font-path ~/Projects/Instatypst/Fonts edicion-latina.typ
-#import "lib.typ": *
+#import "comun/lib.typ": *
 
 #show: edicion.with(
   "Der authentische Text der Leipziger Disputation",
@@ -15,6 +15,6 @@
   ],
 )
 
-#include "lote1.typ"
-#include "lote2.typ"
-#include "lote3.typ"
+#include "fragmentos/lote1.typ"
+#include "fragmentos/lote2.typ"
+#include "fragmentos/lote3.typ"

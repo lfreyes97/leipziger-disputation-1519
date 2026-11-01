@@ -22,11 +22,11 @@
     author: "Seitz 1903",
     date: version,
     paper: "a4",
-    font-size: 11pt,
+    font-size: 12pt,
     margin-inside: 3cm,
     margin-outside: 2.5cm,
     margin-y: 2.5cm,
-    fonts: (body: "Libertinus Serif", heading: "IM FELL English", title: "IM FELL English"),
+    fonts: (body: ("EB Garamond 12", "Libertinus Serif"), heading: "IM FELL English", title: "IM FELL English"),
     lang: lang,
     // `la` no tiene etiquetas propias en documentclass: en español
     labels: (part: "Parte", chapter: "Capítulo", appendix: "Apéndice", section: "Sección",

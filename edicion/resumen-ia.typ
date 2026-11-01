@@ -2,7 +2,7 @@
 // Compilar: scripts/construir.sh resumen
 #set document(title: "Resumen de IA — El debate de Lutero con Eck (Leipzig, 1519)")
 #set page(paper: "a4", margin: (x: 3cm, y: 2.5cm), numbering: "1")
-#set text(font: "Libertinus Serif", lang: "es", size: 11pt)
+#set text(font: ("EB Garamond 12", "Libertinus Serif"), lang: "es", size: 12pt)
 #set par(justify: true, first-line-indent: 1.2em, spacing: 0.7em)
 #set smartquote(enabled: false)
 #show heading: set text(font: "IM FELL English", weight: "regular")

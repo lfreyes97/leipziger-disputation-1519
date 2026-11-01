@@ -23,8 +23,8 @@
 #let seccion(cuerpo, pagina: none) = heading(level: 3, numbering: none, outlined: true)[
   #if pagina != none [#pag(pagina)]#cuerpo]
 // Aspecto de la etiqueta de orador (lo usa también `titulos.typ`).
-#let estilo-orador(cuerpo) = block(above: 1.4em, below: 0.5em, sticky: true,
-  text(style: "italic", weight: "bold", cuerpo))
+#let estilo-orador(cuerpo) = block(above: 1.4em, below: 0.6em, sticky: true, width: 100%,
+  align(center, text(style: "italic", size: 1.12em, cuerpo)))
 // Misma etiqueta, sin ser encabezado: para las que llevan llamada de nota (el
 // texto de la nota acabaría en el contorno del PDF).
 #let oradornota(cuerpo, pagina: none) = estilo-orador[#if pagina != none [#pag(pagina)]#cuerpo]

@@ -105,7 +105,7 @@ registran en `docs/AGRADECIMIENTOS.md`. Para proponer un cambio por PR, ver
 
 Requiere Python 3 y Typst 0.15, más los paquetes locales `documentclass` y
 `instatypst` (portada, legales y ornamentos; instalados como `@local`) y las
-fuentes IM FELL e Libertinus Serif. Desde la raíz del repositorio:
+fuentes IM FELL y EB Garamond 12 (Libertinus Serif como respaldo). Desde la raíz del repositorio:
 
 ```sh
 FONTS=/ruta/a/Fonts scripts/construir.sh

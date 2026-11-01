@@ -3,6 +3,7 @@
 (solo importa `apnota` de edicion/comun/aparato.typ).
 Uso: python3 md2typ.py edicion/lotes/lote1-pp055-109.md > edicion/fragmentos/lote1.typ
      (--titulo-inicial: la primera línea es un encabezado de segundo nivel;
+      --cursiva: *texto* es cursiva (la introducción de Seitz);
       --idioma=la|es: marca en el texto las entradas del índice, ver indice_marcas.py)
 - [^key] -> #apnota("etiqueta")[definición]  (#apnota se define en edicion/comun/aparato.typ)
 - La etiqueta es la del impreso: la clave sin el prefijo de página/fragmento y
@@ -37,7 +38,10 @@ def etiqueta(clave):
     return re.sub(r'^(\d+[a-z])\d+$', r'\1', et)
 
 
-def convertir(src, titulo=False, idioma=None):
+CURSIVA = re.compile(r'\*([^*\s](?:[^*]*[^*\s])?)\*')
+
+
+def convertir(src, titulo=False, idioma=None, cursiva=False):
     defs = dict(re.findall(r'^\[\^([^\]]+)\]:\s?(.*)$', src, re.M))
     lineas, usadas = [], []
     pendiente = None      # página impresa que empieza en la próxima línea
@@ -86,6 +90,18 @@ def convertir(src, titulo=False, idioma=None):
         lineas[k] = '\x05' + lineas[k].strip() + '\x06'
     cuerpo = '\n'.join(lineas).strip()
 
+    def esc_c(t):
+        """esc() y, con cursiva=True, *texto* -> #emph[texto]"""
+        if not cursiva:
+            return esc(t)
+        out, pos = [], 0
+        for m in CURSIVA.finditer(t):
+            out.append(esc(t[pos:m.start()]))
+            out.append('#emph[' + esc(m.group(1)) + ']')
+            pos = m.end()
+        out.append(esc(t[pos:]))
+        return ''.join(out)
+
     # primero se escapa el texto, luego se insertan las llamadas (que llevan
     # sus propios corchetes)
     partes = re.split(r'(\[\^[^\]]+\])', cuerpo)
@@ -96,12 +112,12 @@ def convertir(src, titulo=False, idioma=None):
             usadas.append(m.group(1))
             salida.append('\x00NOTA%s\x01%s\x02' % (etiqueta(m.group(1)), defs[m.group(1)]))
         else:
-            salida.append(''.join(t if t.startswith('\x10') else (marcar(t, esc, idioma) if idioma else esc(t)) for t in re.split('(\x10[^\x10]*\x10)', p)))
+            salida.append(''.join(t if t.startswith('\x10') else (marcar(t, esc_c, idioma) if idioma else esc_c(t)) for t in re.split('(\x10[^\x10]*\x10)', p)))
     texto = ''.join(salida).replace('\x10', '')
 
     def expandir(m):
         et, d = m.group(1), m.group(2)
-        return '#apnota("%s")[%s]' % (et.replace('"', '\\"'), esc(d))
+        return '#apnota("%s")[%s]' % (et.replace('"', '\\"'), esc_c(d))
 
     texto = re.sub('\x05([^\x06]*)\x06', r'== \1', texto)
     texto = re.sub('\x03([^\x04]*)\x04', r'#emph[\\[\1\\]]', texto)
@@ -118,5 +134,5 @@ def convertir(src, titulo=False, idioma=None):
 
 if __name__ == '__main__':
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
-    sys.stdout.write(convertir(Path(args[0]).read_text(encoding='utf-8'), titulo='--titulo-inicial' in sys.argv,
+    sys.stdout.write(convertir(Path(args[0]).read_text(encoding='utf-8'), titulo='--titulo-inicial' in sys.argv, cursiva='--cursiva' in sys.argv,
                               idioma=next((a.split('=')[1] for a in sys.argv if a.startswith('--idioma=')), None)))

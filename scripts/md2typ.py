@@ -2,7 +2,8 @@
 """Convierte un lote MD (cuerpo + definiciones) a fragmento .typ sin preámbulo
 (solo importa `apnota` de edicion/comun/aparato.typ).
 Uso: python3 md2typ.py edicion/lotes/lote1-pp055-109.md > edicion/fragmentos/lote1.typ
-     (--titulo-inicial: la primera línea es un encabezado de segundo nivel)
+     (--titulo-inicial: la primera línea es un encabezado de segundo nivel;
+      --idioma=la|es: marca en el texto las entradas del índice, ver indice_marcas.py)
 - [^key] -> #apnota("etiqueta")[definición]  (#apnota se define en edicion/comun/aparato.typ)
 - La etiqueta es la del impreso: la clave sin el prefijo de página/fragmento y
   sin los sufijos de desambiguación (065-14-2 -> 14; t03-21b2 -> 21b).
@@ -15,6 +16,10 @@ Uso: python3 md2typ.py edicion/lotes/lote1-pp055-109.md > edicion/fragmentos/lot
 """
 import re, sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+from oradores import es_orador
+from indice_marcas import marcar
 
 ESPECIALES = '\\#$*_@<>[]`~'
 
@@ -32,24 +37,46 @@ def etiqueta(clave):
     return re.sub(r'^(\d+[a-z])\d+$', r'\1', et)
 
 
-def convertir(src, titulo=False):
+def convertir(src, titulo=False, idioma=None):
     defs = dict(re.findall(r'^\[\^([^\]]+)\]:\s?(.*)$', src, re.M))
     lineas, usadas = [], []
+    pendiente = None      # página impresa que empieza en la próxima línea
     for l in src.splitlines():
         if re.match(r'^\[\^[^\]]+\]:', l):
             continue
         m = re.match(r'^\s*<!--(.*?)-->\s*$', l)
         if m:
             interno = m.group(1).strip()
+            mp = re.fullmatch(r'pag:(\d+)', interno)
+            if mp:
+                pendiente = int(mp.group(1))
+                continue
             # empalme: lo consume el ensamblaje; test-p…: aviso de trabajo del piloto
             if not interno.startswith(('empalme:', 'test-p')):
                 # una clave citada en el comentario no es una llamada
                 interno = re.sub(r'\[\^([^\]]+)\]', r'\1', interno)
                 lineas.append('\x03' + interno + '\x04')
             continue
+        # marcas de página dentro de la línea (palabra partida entre páginas)
+        l = re.sub(r'<!--pag:(\d+)-->', lambda mm: '\x10#pag(%d)\x10' % int(mm.group(1)), l)
+        if re.sub('\x10[^\x10]*\x10', '', l).strip() == 'II.':
+            lineas.append('\x10#seccion[II.]\x10')   # la marca de página pasa al texto que sigue
+            continue
+        o = es_orador(re.sub(r'\[\^[^\]]+\]', '', l))   # la etiqueta puede llevar llamadas de nota
+        if o:
+            ref, _ = o
+            if ref:
+                lineas.append('\x10#refimp("%s")\x10' % ref)
+            rotulo = re.sub(r'^\s*\[\d+\]\s*', '', l).strip()
+            fn = 'oradornota' if '[^' in rotulo else 'orador'   # con nota: sin encabezado
+            lineas.append('\x10#%s[\x10%s\x10]\x10' % (fn, rotulo))
+            continue
         # al inicio de línea, Typst interpreta -, +, =, / y "1." como marcas
         if re.match(r'^\s*([-+=/]|\d+\.)(\s|$)', l):
             l = re.sub(r'^(\s*)', r'\1\\', l, count=1)
+        if pendiente and l.strip():
+            l = '\x10#pag(%d)\x10' % pendiente + l
+            pendiente = None
         lineas.append(l)
     if titulo:   # la primera línea no vacía es un encabezado (p. ej. «A. Las fuentes.»)
         k = next(i for i, l in enumerate(lineas) if l.strip())
@@ -66,8 +93,8 @@ def convertir(src, titulo=False):
             usadas.append(m.group(1))
             salida.append('\x00NOTA%s\x01%s\x02' % (etiqueta(m.group(1)), defs[m.group(1)]))
         else:
-            salida.append(esc(p))
-    texto = ''.join(salida)
+            salida.append(''.join(t if t.startswith('\x10') else (marcar(t, esc, idioma) if idioma else esc(t)) for t in re.split('(\x10[^\x10]*\x10)', p)))
+    texto = ''.join(salida).replace('\x10', '')
 
     def expandir(m):
         et, d = m.group(1), m.group(2)
@@ -83,9 +110,10 @@ def convertir(src, titulo=False):
     if sin_llamada:
         texto += ('\n\n#emph[Notas del aparato sin llamada en el cuerpo:] '
                   + '; '.join('\\[%s\\] %s' % (esc(etiqueta(k)), esc(v)) for k, v in sin_llamada) + '\n')
-    return '#import "../comun/aparato.typ": apnota\n\n' + texto
+    return '#import "../comun/aparato.typ": apnota, pag, orador, oradornota, refimp, seccion\n#import "../comun/entradas.typ": *\n\n' + texto
 
 
 if __name__ == '__main__':
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
-    sys.stdout.write(convertir(Path(args[0]).read_text(encoding='utf-8'), titulo='--titulo-inicial' in sys.argv))
+    sys.stdout.write(convertir(Path(args[0]).read_text(encoding='utf-8'), titulo='--titulo-inicial' in sys.argv,
+                              idioma=next((a.split('=')[1] for a in sys.argv if a.startswith('--idioma=')), None)))

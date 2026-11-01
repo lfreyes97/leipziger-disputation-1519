@@ -1,0 +1,15 @@
+{
+  "nota": "Prototipo del índice de personas. Las formas son expresiones regulares; 'la' se aplica al texto latino y 'es' a la traducción. Falta curar: unir variantes, distinguir homónimos (p. ej. los Gregorios) y ampliar a lugares, citas y concilios.",
+  "personas": [
+    {"clave": "agustin",    "nombre": "Agustín (de Hipona)",   "la": "Augustin(?:us|i|o|um|e)?", "es": "Agustín"},
+    {"clave": "jeronimo",   "nombre": "Jerónimo",              "la": "Hieronym(?:us|i|o|um|e)",  "es": "Jerónimo"},
+    {"clave": "cipriano",   "nombre": "Cipriano",              "la": "Cyprian(?:us|i|o|um|e)",   "es": "Cipriano"},
+    {"clave": "gregorio",   "nombre": "Gregorio",              "la": "Gregori(?:us|i|o|um|e)",   "es": "Gregorio"},
+    {"clave": "crisostomo", "nombre": "Juan Crisóstomo",       "la": "Chrysostom(?:us|i|o|um|e)","es": "Crisóstomo"},
+    {"clave": "bernardo",   "nombre": "Bernardo (de Claraval)","la": "Bernh?ard(?:us|i|o|um|e)", "es": "Bernardo"},
+    {"clave": "tomas",      "nombre": "Tomás (de Aquino)",     "la": "Thom(?:as|ae|am|a)",       "es": "Tomás"},
+    {"clave": "ambrosio",   "nombre": "Ambrosio",              "la": "Ambrosi(?:us|i|o|um|e)",   "es": "Ambrosio"},
+    {"clave": "pelagio",    "nombre": "Pelagio",               "la": "Pelagi(?:us|i|o|um|e)",    "es": "Pelagio"},
+    {"clave": "dionisio",   "nombre": "Dionisio Areopagita",   "la": "Dionysi(?:us|i|o|um|e)",   "es": "Dionisio"}
+  ]
+}

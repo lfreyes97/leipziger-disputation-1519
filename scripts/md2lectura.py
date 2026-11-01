@@ -5,10 +5,16 @@ Uso: python3 md2lectura.py edicion/lotes/lote1-pp055-109.md --typ edicion/fragme
 """
 import re, sys, argparse
 
-LA = re.compile(r'^(\[\d+\]\s*)?((Dominus|D\.)\s+)+(doctor\s+)?(Martinus|Eccius)\.\s*$')
-ES = re.compile(r'^(\[\d+\]\s*)?El\s+(se[ñn]or\s+)?(doctor\s+)?((D\.\s+)+)?(doctor\s+)?(Mart[íi]n|Eck)\.\s*$')
+sys.path.insert(0, __import__('os').path.dirname(__import__('os').path.abspath(__file__)))
+from oradores import es_orador
+from indice_marcas import marcar
 
 ESPECIALES = '\\#$*_@<>[]`~'
+
+
+def esc_p(s):
+    return ''.join(t if t.startswith('\x10') else (marcar(t, esc, IDIOMA) if IDIOMA else esc(t))
+                   for t in re.split('(\x10[^\x10]*\x10)', s))
 
 
 def esc(s):
@@ -22,37 +28,60 @@ ap = argparse.ArgumentParser()
 ap.add_argument('src')
 ap.add_argument('--typ', required=True)
 ap.add_argument('--md', required=True)
+ap.add_argument('--idioma', choices=['la', 'es'])
 a = ap.parse_args()
+IDIOMA = a.idioma
 
 src = open(a.src, encoding='utf-8').read()
-lines = [l for l in src.splitlines()
-         if not re.match(r'^\[\^[^\]]+\]:', l) and not l.strip().startswith('<!--')]
-lines = [re.sub(r'\[\^[^\]]+\]', '', l) for l in lines]  # por si quedó algún marcador
-
-tout, mout = [], []
-for l in lines:
-    s = l.strip()
-    if s == 'II.':
-        tout.append('#align(center, text(1.4em)[II.])'); mout.append('## II.')
+lines, pendiente, inicio = [], None, []
+for l in src.splitlines():
+    if re.match(r'^\[\^[^\]]+\]:', l):
         continue
-    m = LA.match(s) or ES.match(s)
-    if m:
-        ref = re.match(r'\[(\d+)\]', s)
-        label = re.sub(r'^\[\d+\]\s*', '', s)
+    mp = re.fullmatch(r'\s*<!--pag:(\d+)-->\s*', l)
+    if mp:
+        pendiente = int(mp.group(1))
+        continue
+    if l.strip().startswith('<!--'):
+        continue
+    l = re.sub(r'\[\^[^\]]+\]', '', l)  # por si quedó algún marcador
+    l = re.sub(r'<!--pag:(\d+)-->', lambda m: '\x10#pag(%d)\x10' % int(m.group(1)), l)
+    lines.append(l)
+    inicio.append(pendiente if l.strip() else None)
+    if l.strip():
+        pendiente = None
+
+def sin_marcas(t):
+    return re.sub('\x10[^\x10]*\x10', '', t)
+
+tout, mout, carry = [], [], None
+for l, pg in zip(lines, inicio):
+    s = l.strip()
+    if pg:
+        carry = pg
+    pg = None          # la marca de página pasa al próximo texto, no a los encabezados
+    if sin_marcas(s) == 'II.':
+        tout.append('#seccion[II.]'); mout.append('## II.')
+        continue
+    o = es_orador(sin_marcas(s))
+    if o:
+        ref, label = o
         if ref:
-            tout.append('#refimp("%s")' % ref.group(1))
-            mout.append(f'> [{ref.group(1)}]')
+            tout.append('#refimp("%s")' % ref)
+            mout.append(f'> [{ref}]')
         tout.append('#orador[%s]' % esc(label))
         mout.append(f'### {label}')
         continue
-    t = re.sub(r'\\\[(\d{3})\\\]', r'#refimp("\g<1>")', esc(s))
+    t = re.sub(r'\\\[(\d{3})\\\]', r'#refimp("\g<1>")', esc_p(s))
     if re.match(r'^([-+=/]|\d+\.)(\s|$)', t):
         t = '\\' + t
-    tout.append(t)
-    mout.append(re.sub(r'\s+', ' ', s))
+    if carry and t:
+        t = '#pag(%d) ' % carry + t
+        carry = None
+    tout.append(t.replace('\x10', ''))
+    mout.append(re.sub(r'\s+', ' ', sin_marcas(s)))
 
 open(a.typ, 'w', encoding='utf-8').write(
-    '#import "../comun/aparato.typ": orador, refimp\n\n' + '\n'.join(tout) + '\n')
+    '#import "../comun/aparato.typ": orador, pag, refimp, seccion\n#import "../comun/entradas.typ": *\n\n' + '\n'.join(tout) + '\n')
 open(a.md, 'w', encoding='utf-8').write('\n\n'.join(m for m in mout if m is not None) + '\n')
 n = sum(1 for l in tout if l.startswith('#orador'))
 print(a.src, '→ oradores:', n)

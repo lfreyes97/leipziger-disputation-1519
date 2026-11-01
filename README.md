@@ -118,6 +118,12 @@ Los archivos de `edicion/lotes/` y `edicion/fragmentos/` son derivados y no se
 editan a mano; la fuente canónica es el Markdown de `transcripcion/` y
 `traduccion/`.
 
+Opciones de `construir.sh`, por variable de entorno:
+`INDICE=si` añade un índice de personas al final (prototipo: marca automáticamente
+los nombres de `edicion/indice-entradas.json` y da páginas del impreso de Seitz),
+`RESUMEN=si` añade el resumen de IA, y `construir.sh resumen` compila solo este.
+Las ediciones llevan además la paginación de Seitz en el margen.
+
 Para compilar una sola edición:
 
 ```sh

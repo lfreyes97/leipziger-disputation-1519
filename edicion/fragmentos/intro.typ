@@ -1,4 +1,5 @@
-#import "../comun/aparato.typ": apnota
+#import "../comun/aparato.typ": apnota, pag, orador, oradornota, refimp, seccion
+#import "../comun/entradas.typ": *
 
 == A. Las fuentes.
 

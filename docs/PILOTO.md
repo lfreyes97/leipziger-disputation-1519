@@ -21,19 +21,23 @@ método y comprobar que funcionaba de principio a fin.
 
 ## Dónde está el material
 
-Los fragmentos del piloto siguen en uso, porque las pp. 55–64 se ensamblan
-desde ellos:
+Las pp. 55–64 ya no se ensamblan desde los fragmentos del piloto: se
+partieron en una página por archivo, igual que el resto
+(`transcripcion/pp-055.md` … `pp-064.md`, `traduccion/trad-pp-055.md` … `trad-pp-064.md`).
+Los fragmentos originales se conservan como evidencia en `transcripcion/test/`
+y `traduccion/test/`:
 
 | Fragmento | Páginas impresas |
 |---|---|
-| `transcripcion/test/test-p01.md`, `test-p01b.md`, `test-p02.md` | 55–58 (reparto exacto por confirmar) |
-| `transcripcion/test/test-p03.md` | 59–60 |
-| `transcripcion/test/test-p04.md` | 61–62 |
-| `transcripcion/test/test-p05.md` | 63–64 |
+| `test-p01.md` | 55–56 |
+| `test-p01b.md` | 56 |
+| `test-p02.md` | 56–58 (empieza en la palabra partida «omni-/bus») |
+| `test-p03.md` | 59–60 |
+| `test-p04.md` | 61–62 |
+| `test-p05.md` | 63–64 |
 
-La correspondencia de páginas es la que indican los comentarios de cada
-archivo; confírmala contra el facsímil antes de citarla. Las pp. 65 en
-adelante sí están una por archivo (`pp-065.md` …).
+El reparto exacto de páginas por fragmento sale de la alineación con el OCR
+(ver `docs/RESOLUCIONES.md`, punto 5, y `docs/REVISION-pp55-64.md`).
 
 Se quitaron del árbol de trabajo, pero siguen en el historial de git
 (commit `226591f`, ramas `main` y `latex`):

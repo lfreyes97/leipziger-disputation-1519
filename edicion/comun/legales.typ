@@ -1,14 +1,15 @@
 // Página de legales — «Lutero contra Eck»
-// Basada en ~/Proyectos/Lutero/legales.typ, con el aviso sobre el uso de IA.
+// Basada en ~/Proyectos/Lutero/legales.typ, con el aviso sobre el uso de IA;
+// sobre fondo blanco, como el resto del interior.
 // Requiere @local/instatypst y las fuentes IM FELL.
 
 #import "@local/instatypst:0.1.0": fleurones as fl
 
 #let rojo = rgb("#9a1f17")
-#let sc(body) = text(font: "IM FELL English SC", body)
+#let sc(body) = text(font: ("EB Garamond SC 12", "Libertinus Serif"), body)
 
-#let legales(version: "", url: "", nota: none) = page(paper: "a4", margin: (x: 3cm, y: 3cm), numbering: none, fill: rgb("#efe4c8"), {
-  set text(font: "IM FELL English", lang: "es", size: 9pt, fill: rgb("#1e1610"), number-type: "lining")
+#let legales(version: "", url: "", nota: none) = page(paper: "a4", margin: (x: 3cm, y: 3cm), numbering: none, {
+  set text(font: ("EB Garamond 12", "Libertinus Serif"), lang: "es", size: 10pt)
   set par(leading: 0.6em, spacing: 1.1em, justify: false)
   v(1fr)
   block(width: 10cm)[
@@ -30,8 +31,8 @@
     fines comerciales, sin pedir permiso. \
     #text(size: 8pt)[https:\/\/creativecommons.org/publicdomain/zero/1.0/deed.es]
 
-    #sc[Tipografía.] Compuesto en IM FELL English e IM FELL English SC;
-    orlas y viñetas en IM FELL FLOWERS~1 y~2. \
+    #sc[Tipografía.] Cuerpo en EB Garamond; títulos, portada y ornamentos
+    en IM FELL English e IM FELL FLOWERS~1 y~2. \
     #text(style: "italic", fl.credito)
 
     #if nota != none [#sc[Criterios.] #nota]

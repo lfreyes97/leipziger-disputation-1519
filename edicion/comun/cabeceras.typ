@@ -9,6 +9,7 @@
 // Sin cabecera: páginas sin numeración (portada, legales) y la primera de cada capítulo.
 // Las páginas de Seitz y el orador solo aparecen en el texto.
 #import "aparato.typ": seitz
+#import "paginas.typ": pagina-en-blanco
 
 #let cabeceras(titulo, cuerpo) = {
   let fuente = ("EB Garamond SC 12", "Libertinus Serif")
@@ -18,7 +19,7 @@
   set page(
     header: context {
       let p = here().page()
-      if page.numbering == none { return none }
+      if page.numbering == none or pagina-en-blanco(here().page()) { return none }
       let caps = query(heading.where(level: 2))
       if caps.any(h => h.location().page() == p) { return none }
       let previos = caps.filter(h => h.location().page() < p)
@@ -34,7 +35,7 @@
       if calc.odd(p) { linea(cap, pags) } else { linea(pags, titulo) }
     },
     footer: context {
-      if page.numbering == none { return none }
+      if page.numbering == none or pagina-en-blanco(here().page()) { return none }
       let p = here().page()
       let folio = counter(page).display(page.numbering)
       // último orador de la página: el último que entra en ella o, si no entra ninguno, el que continúa

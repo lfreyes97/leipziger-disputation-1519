@@ -1,11 +1,12 @@
 // Composición común de las cuatro ediciones (crítica y lectura, latina y española).
 // Requiere @local/documentclass y @local/instatypst (portada y legales).
 // Sin portada ni legales: typst compile --input portada=no …
-#import "@local/documentclass:0.1.0": book, front, main, back
+#import "@local/documentclass:0.1.0": book, front, main, back, half-title
 #import "aparato.typ": apnota
 #import "titulos.typ": titulos
 #import "indice.typ": indice
 #import "cabeceras.typ": cabeceras
+#import "paginas.typ": en-blanco
 
 #let con-portada = sys.inputs.at("portada", default: "si") != "no"
 #let repo = "https://github.com/lfreyes97/leipziger-disputation-1519/issues"
@@ -33,7 +34,12 @@
     labels: (part: "Parte", chapter: "Capítulo", appendix: "Apéndice", section: "Sección",
              contents: "Contenido", abstract: "Resumen", figures: "Figuras", tables: "Tablas"),
     use-parts: false,
-    cover: portada,
+    // portada, reverso en blanco, portadilla monocromática y otro reverso en blanco
+    cover: {
+      if portada != none { portada; en-blanco() }
+      half-title(title: titulo)
+      en-blanco()
+    },
     back-cover: none,
   )
   show: titulos
@@ -48,8 +54,12 @@
     h(0.4em)
     it.note.body
   }
+  legales            // en el reverso de la portada; antes de `front`, que abre en página impar
   show: front
-  legales
+  // contenido (se compone a partir de los encabezados; sin sus propias entradas)
+  heading(outlined: false)[Contenido]
+  show outline.entry.where(level: 2): it => { v(0.9em, weak: true); it }
+  outline(title: none, depth: 3)
   // sin portada ni legales (--input portada=no) la nota va suelta
   if not con-portada and nota != none { nota }
   // estudio preliminar: traducción del estudio introductorio de Seitz (pp. 1-11)

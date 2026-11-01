@@ -1,0 +1,54 @@
+name: Errata
+description: Reportar un error de transcripción (latín) o de traducción (español)
+title: "[Errata] p. "
+labels: ["errata"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        La transcripción y la traducción las hizo una IA y no tienen revisión
+        humana sistemática. Gracias por ayudar a corregirlas.
+        Cita siempre la **página impresa** de Seitz (1903), no la del PDF
+        (PDF = impresa + 8).
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de error
+      options:
+        - Transcripción (latín)
+        - Traducción (español)
+        - Nota de aparato
+        - Otro
+    validations:
+      required: true
+  - type: input
+    id: pagina
+    attributes:
+      label: Página impresa de Seitz
+      placeholder: "p. 154"
+    validations:
+      required: true
+  - type: input
+    id: linea
+    attributes:
+      label: Línea o palabra afectada
+      placeholder: "línea 12, «probavimus»"
+    validations:
+      required: true
+  - type: textarea
+    id: repo
+    attributes:
+      label: Lo que dice este repositorio
+    validations:
+      required: true
+  - type: textarea
+    id: facsimil
+    attributes:
+      label: Lo que dice el facsímil (o lo que propones)
+      description: Si la palabra del facsímil es dudosa, dilo.
+    validations:
+      required: true
+  - type: textarea
+    id: motivo
+    attributes:
+      label: Motivo o comentario

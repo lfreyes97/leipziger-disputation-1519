@@ -3,12 +3,15 @@
 Uso:
   python3 ensamblar.py lote1 55 109    -> edicion/lotes/lote1-pp055-109.md
   python3 ensamblar.py trad1 55 109    -> edicion/lotes/trad1-pp055-109.md
+  python3 ensamblar.py tradintro 1 11  -> edicion/lotes/tradintro-pp001-011.md (intro de Seitz; `intro` = alemán)
   python3 ensamblar.py --check transcripcion/pp-065.md [...]  (verifica claves)
 Reglas:
 - Orden numérico. Unión con '\\n\\n', salvo que el archivo previo termine en
   palabra con guion ('omni-'): se quita el guion y se pega con la primera
   línea del siguiente (empalme).
 - Las claves [^PPP-N] ya son únicas por página; no se reescriben.
+- En la introducción de Seitz (`intro`, `tradintro`), prosa continua: si una página
+  termina sin puntuación final, la frase sigue en la siguiente y se unen con espacio.
 """
 import re, sys
 from pathlib import Path
@@ -45,7 +48,7 @@ def split_body_defs(text):
             body_lines.append(l)
     return '\n'.join(body_lines).strip(), '\n'.join(def_lines).strip()
 
-def assemble(files):
+def assemble(files, continuo=False):
     bodies, alldefs = [], []
     for f in files:
         t = load(f)
@@ -60,6 +63,8 @@ def assemble(files):
     for b in bodies[1:]:
         if re.search(r'[\w)]-$', out) and re.match(r'\w', b):
             out = out[:-1] + b.lstrip()
+        elif continuo and re.search(r'[^.:;?!»\"\')—\s]$', re.sub(r'\[\^[^\]]+\]$', '', out)):
+            out += ' ' + b    # prosa continua: la frase sigue en la página siguiente
         else:
             out += '\n\n' + b
     return out + '\n\n' + '\n'.join(alldefs) + '\n'
@@ -69,14 +74,18 @@ if __name__ == '__main__':
         ok = all(check(load(Path(a)), a) for a in sys.argv[2:])
         sys.exit(0 if ok else 1)
     name, a, b = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
-    if name.startswith('trad'):
+    if name == 'tradintro':    # introducción de Seitz traducida (impresas 1-11)
+        files = [TRADDIR / f'trad-intro-pp-{p:03d}.md' for p in range(a, b + 1)]
+    elif name == 'intro':      # introducción de Seitz en alemán
+        files = [TRANSDIR / f'intro-pp-{p:03d}.md' for p in range(a, b + 1)]
+    elif name.startswith('trad'):
         files = [TRADDIR / f'trad-pp-{p:03d}.md' for p in range(a, b + 1)]
     else:
         files = [TRANSDIR / f'pp-{p:03d}.md' for p in range(a, b + 1)]
     missing = [str(f) for f in files if not f.exists()]
     if missing:
         print('FALTAN:', *missing); sys.exit(2)
-    out = assemble(files)
+    out = assemble(files, continuo=name in ('intro', 'tradintro'))
     dest = EDIDIR / f'{name}-pp{a:03d}-{b:03d}.md'
     dest.write_text(out, encoding='utf-8')
     print('escrito', dest, len(out), 'chars')

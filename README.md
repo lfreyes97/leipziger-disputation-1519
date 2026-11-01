@@ -25,8 +25,8 @@ espacio para añadirlo más adelante.
 | Transcripción latina, pp. 55–218 (164 páginas impresas) | Hecha con IA; sin revisión humana sistemática |
 | Traducción al español, pp. 55–218 | Hecha con IA desde la transcripción; revisión filológica solo por muestreo |
 | Aparato de notas | 2788 notas en las pp. 65–218; verificadas por script (ninguna llamada sin definición ni clave duplicada) |
-| Introducción de Seitz (impresas 1–11) | Transcrita; sin traducir |
-| Estudio preliminar (`docs/ESTUDIO-PRELIMINAR.md`) | **Borrador de IA** con pasajes marcados «no verificado»; no es texto definitivo |
+| Introducción de Seitz (impresas 1–11) | Transcrita en alemán y traducida al español con IA (`traduccion/trad-intro-pp-*.md`); sin revisión humana sistemática |
+| Estudio preliminar (`docs/ESTUDIO-PRELIMINAR.md`) | Escrito con IA, centrado en el debate de Lutero con Eck, con pasajes marcados «no verificado»; va al comienzo de las cuatro ediciones |
 | Índices (`docs/INDICES-borrador.md`) | Borrador automático, sin curar |
 | Ediciones en PDF | Cuatro, compiladas con Typst desde `scripts/construir.sh` (crítica y lectura, latina y española); se publican como *release*, no en el repo |
 | Hase 1827 (`fuentes/hase1827/`) | Solo el facsímil; sin transcribir |
@@ -111,7 +111,7 @@ fuentes IM FELL e Libertinus Serif. Desde la raíz del repositorio:
 FONTS=/ruta/a/Fonts scripts/construir.sh
 ```
 
-El script regenera los fragmentos Typst desde el Markdown (`md2typ.py`,
+El script ensambla las páginas en lotes, regenera los fragmentos Typst desde el Markdown (`md2typ.py`, `md2prosa.py`,
 `md2lectura.py`) y compila en `build/` las cuatro ediciones:
 `edicion-latina`, `edicion-espanola`, `lectura-latina` y `lectura-espanola`.
 Los archivos de `edicion/lotes/` y `edicion/fragmentos/` son derivados y no se

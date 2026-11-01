@@ -20,3 +20,8 @@ Etiquetas de orador: `D. doctor Martinus.` → `El doctor D. Martín.`; `Dominus
 - Pasaje oscuro: mejor traducción posible + aviso en el reporte (no inventar; no usar `[...]` salvo ilegible heredado).
 - Erratas del impreso ya documentadas en la transcripción: traducir el sentido probable y conservar la marca si la hay.
 - Respuesta final: SOLO lista de archivos + nº de notas + dudas. NUNCA pegar el texto.
+
+## Introducción de Seitz (alemán → español)
+- Fuente: `transcripcion/intro-pp-001.md` … `011.md`. Un archivo por página impresa: `traduccion/trad-intro-pp-001.md` … `011.md`, con los cortes de página en el mismo punto que el alemán y las mismas claves de nota (`[^001-1]`).
+- A diferencia del aparato crítico, las notas de Seitz (bibliografía y observaciones en alemán) **se traducen**; las siglas (P, M, U, Uv), las abreviaturas de edición (W. A.) y las citas latinas se conservan.
+- Términos fijos: *Nachschrift* → «apunte»; *Hörfehler* → «error de oído»; *Protokolldruck* → «impreso del protocolo»; *Urdruck* se conserva; *Notariatsprotokoll* → «protocolo notarial»; *Bl.* → «h.» (hoja).

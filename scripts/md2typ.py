@@ -2,6 +2,7 @@
 """Convierte un lote MD (cuerpo + definiciones) a fragmento .typ sin preámbulo
 (solo importa `apnota` de edicion/comun/aparato.typ).
 Uso: python3 md2typ.py edicion/lotes/lote1-pp055-109.md > edicion/fragmentos/lote1.typ
+     (--titulo-inicial: la primera línea es un encabezado de segundo nivel)
 - [^key] -> #apnota("etiqueta")[definición]  (#apnota se define en edicion/comun/aparato.typ)
 - La etiqueta es la del impreso: la clave sin el prefijo de página/fragmento y
   sin los sufijos de desambiguación (065-14-2 -> 14; t03-21b2 -> 21b).
@@ -31,7 +32,7 @@ def etiqueta(clave):
     return re.sub(r'^(\d+[a-z])\d+$', r'\1', et)
 
 
-def convertir(src):
+def convertir(src, titulo=False):
     defs = dict(re.findall(r'^\[\^([^\]]+)\]:\s?(.*)$', src, re.M))
     lineas, usadas = [], []
     for l in src.splitlines():
@@ -50,6 +51,9 @@ def convertir(src):
         if re.match(r'^\s*([-+=/]|\d+\.)(\s|$)', l):
             l = re.sub(r'^(\s*)', r'\1\\', l, count=1)
         lineas.append(l)
+    if titulo:   # la primera línea no vacía es un encabezado (p. ej. «A. Las fuentes.»)
+        k = next(i for i, l in enumerate(lineas) if l.strip())
+        lineas[k] = '\x05' + lineas[k].strip() + '\x06'
     cuerpo = '\n'.join(lineas).strip()
 
     # primero se escapa el texto, luego se insertan las llamadas (que llevan
@@ -69,6 +73,7 @@ def convertir(src):
         et, d = m.group(1), m.group(2)
         return '#apnota("%s")[%s]' % (et.replace('"', '\\"'), esc(d))
 
+    texto = re.sub('\x05([^\x06]*)\x06', r'== \1', texto)
     texto = re.sub('\x03([^\x04]*)\x04', r'#emph[\\[\1\\]]', texto)
     texto = re.sub('\x00NOTA([^\x01]*)\x01([^\x02]*)\x02', expandir, texto)
     # una llamada seguida de «.letra» se leería como acceso a un campo
@@ -82,4 +87,5 @@ def convertir(src):
 
 
 if __name__ == '__main__':
-    sys.stdout.write(convertir(Path(sys.argv[1]).read_text(encoding='utf-8')))
+    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    sys.stdout.write(convertir(Path(args[0]).read_text(encoding='utf-8'), titulo='--titulo-inicial' in sys.argv))

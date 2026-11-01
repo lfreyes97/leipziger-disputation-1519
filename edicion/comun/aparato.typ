@@ -14,6 +14,7 @@
 // el margen (no ocupa línea ni altera el texto).
 #let pag(n) = {
   seitz.update(n)
+  [#metadata(n) <seitz-pag>]   // para la cabecera: páginas de Seitz de cada página
   place(left, dx: -1.9cm, box(width: 1.5cm, align(right,
     text(size: 0.72em, fill: rgb("#9a1f17"), number-type: "lining")[#n])))
 }

@@ -5,6 +5,7 @@
 #import "aparato.typ": apnota
 #import "titulos.typ": titulos
 #import "indice.typ": indice
+#import "cabeceras.typ": cabeceras
 
 #let con-portada = sys.inputs.at("portada", default: "si") != "no"
 #let repo = "https://github.com/lfreyes97/leipziger-disputation-1519/issues"
@@ -36,6 +37,7 @@
     back-cover: none,
   )
   show: titulos
+  show: cabeceras.with(titulo)
   set smartquote(enabled: false)
   set par(justify: true)
   // Etiqueta del impreso en la llamada y en el pie (no un número correlativo)
